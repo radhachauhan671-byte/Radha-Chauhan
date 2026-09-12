@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            background-color: beige;
+            width: 1000px;
+            height:90px;
+            border: 30px;
+
+
+        }
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    padding: 20px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+}
+
+.logo{
+
+    display:flex;
+border-radius: 150px;
+border: solid;
+justify-content: space-around;
+height: 50px;
+width: 100px;
+padding:5px;
+padding-top: 10px;
+padding-left: 10px;
+background-color: rgb(25, 17, 32);
+color: white;
+
+}
+.sofa{
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    text-align: center;
+    margin-left: 500px;
+
+
+}
+
+.images{
+    display: flex;
+    width: 800px;
+    animation: slide 5s infinite;
+}
+
+
+.images img{
+width: 400px;
+height: 250px;
+object-fit: cover;
+
+}
+@keyframes slide{
+    0%{
+        transform:translateX(0);
+    }
+    25% {
+        transform: translateX(-400px);
+    }
+    50%{
+        transform: translateX(-800px);
+    }
+    75%{
+        transform: translateX(-1200px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.chair{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
+    margin-left: 100px;
+    margin-top: 100px;
+
+}
+.mordenlamp{
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+.mordenlamp img{
+    width: 200px;
+    height:300px ;
+}
+
+.backgroundimg{
+    margin-top: 50px;
+    margin-left: 0;
+    width: 500px;
+
+}
+.backgroundimg span{
+    margin: 10px;
+    
+}
+
+
+
+    </style>
+</head>
+<body>
+    <nav>
+
+<ul>
+    <div class="logo"> FURNISH TEMPLATE</div>
+<li>+91 12345678900</li>
+<li>home</li>
+<li>About Us</li>
+<li>Products</li>
+<li>Testimonial</li>
+<li>contacts</li>
+
+</ul>
+</nav>
+
+<div class="sofa">
+<h2>%25 Sell</h2>
+<h1> Crafted royal comfort sofa</h1>
+<div class="images">
+<img src="/YELLOW SOFA.png">
+<img src="/SOFA2.png">
+<img src="/SOFA3.png">
+<img src="/SOFA4.png">
+</div>
+
+</div>
+
+<div class="chair">
+   <h1>Oue Favoiurte Collection</h1>
+<p>we are inspired by the realities of life today,in which traditional divides between personal and professional space are more fluid.</p>
+
+    <img src="/boss chair.png">
+<h3> High Back Boss chair</h3>
+<p><del>$78.00</del><span>$68.00</span></p>
+<div class="mordenlamp">
+<img src="/floor lamp.png">
+<img src="/morden chair.png">
+</div>
+
+</div>
+
+
+
+<div class="backgroundimg">
+    
+
+<p>"Lorem ipsum dolor sit amet consectetur adipisicing elit. A aliquam deleniti ipsam ab aliquid repellendus expedita exercitationem laudantium inventore, tempore distinctio nobis aspernatur quisquam natus et ex cum hic minus. Iste a voluptas sunt error mollitia blanditiis quaerat tenetur dolorem!"</p>
+<h3>John Deo</h3>
+<p>CEO, Company name</p>
+</div>
+
+<div class="email">
+    <h1>Subscribe to our Newsletter</h1>
+    <input type="email" placeholder="enter your e-mail address">
+    <button>Subscribe</button>
+
+</div>
+<hr>
+
+<div class="footer">
+<ul>
+<li>home </li>
+<li>services</li>
+<li>products</li>
+<li>About us </li>
+<li>contact</li>
+</ul>
+
+<h1>we design all over the world</h1>
+<button>F</button>
+<button>t</button>
+<button>instra</button>
+<button>in</button>
+<br>
+<p><span>E-mail id</span>
+<h3>info@example.com</h3>
+<button>contacts us</button></p>
+<hr>
+</div>
+<ul>
+ <li>2025 furnish. Developed by CodesCandy</li>
+<li>Distributed by ThemeWagon. All rights reserved.</li>
+</ul>
+<span>privacy policy</span> <span>terms & conditions</span>
+
+
+<button>DOWNLOAD NOW </button>
+ 
+</body>
+</html>

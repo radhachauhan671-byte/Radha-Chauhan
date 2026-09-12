@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mainBox{
+            width: 300px;
+            height: 300px;
+            background-color: black;
+            overflow: hidden;
+            animation: mainBox 3s infinite;
+            border-radius: 50%;
+        }
+        .mainBox img {
+            width: 150px;
+            justify-content: center;
+            margin-left: 25%;
+            overflow: hidden;
+            
+             transition: all 5s linear;
+
+        }
+        img:hover{
+            transform: scale(2);
+           
+        }
+        @keyframes mainBox{
+        0%{background-color:orange;}
+        
+        25%{background-color: rgb(229, 27, 27);}
+        
+        45%{background-color: green;}
+        
+        65%{background-color: blueviolet;}
+        
+        85%{background-color: red;}
+        
+        }
+
+    </style>
+</head>
+<body>
+    <div class="mainBox">
+        <img src="/img/Danesh Dutt.png">
+    </div>
+</body>
+</html>

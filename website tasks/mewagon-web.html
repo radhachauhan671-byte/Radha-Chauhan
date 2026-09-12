@@ -1,0 +1,1248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Monoline</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: white;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .section {
+            padding: 100px 0;
+        }
+
+        .heading {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .heading span {
+            font-size: 13px;
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+        .heading h2 {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            margin: 15px 0;
+        }
+
+        .heading p {
+            color: #777;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #111;
+            color: white;
+            padding: 15px 30px;
+            margin-top: 20px;
+        }
+
+        .header {
+            width: 100%;
+            height: 80px;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: bold;
+            letter-spacing: 4px;
+        }
+
+        .menu {
+            display: flex;
+            gap: 35px;
+            list-style: none;
+        }
+
+        .menu a {
+            font-size: 14px;
+        }
+
+        .menu a:hover {
+            color: #777;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=1800&q=80");
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.45);
+        }
+
+        .hero-content {
+            position: relative;
+            color: white;
+            max-width: 750px;
+        }
+
+        .hero-content span {
+            letter-spacing: 4px;
+            font-size: 14px;
+        }
+
+        .hero-content h1 {
+            font-family: Georgia, serif;
+            font-size: 70px;
+            line-height: 1.1;
+            margin: 20px 0;
+        }
+
+        .hero-content p {
+            max-width: 550px;
+            color: #eee;
+            line-height: 1.8;
+        }
+
+        .hero .btn {
+            background: white;
+            color: #111;
+        }
+
+        .services {
+            background: white;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .service-box {
+            padding: 40px 30px;
+            border: 1px solid #eee;
+        }
+
+        .service-box:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            width: 55px;
+            height: 55px;
+            background: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin-bottom: 25px;
+        }
+
+        .service-box h3 {
+            font-family: Georgia, serif;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .service-box p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        .counter {
+            background: #111;
+            color: white;
+            padding: 70px 0;
+        }
+
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            text-align: center;
+        }
+
+        .counter-box h2 {
+            font-family: Georgia, serif;
+            font-size: 45px;
+        }
+
+        .counter-box p {
+            color: #aaa;
+            margin-top: 5px;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .about-image {
+            position: relative;
+        }
+
+        .about-image img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .about-image::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border: 1px solid #222;
+            left: 20px;
+            top: 20px;
+            z-index: -1;
+        }
+
+        .about-text span {
+            color: #777;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        .about-text h2 {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            line-height: 1.2;
+            margin: 15px 0 25px;
+        }
+
+        .about-text p {
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .portfolio {
+            background: #f7f7f7;
+        }
+
+        .portfolio-menu {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .portfolio-menu button {
+            border: 0;
+            background: transparent;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .portfolio-menu button:first-child {
+            background: #111;
+            color: white;
+        }
+
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .portfolio-box {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .portfolio-box img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        .portfolio-box:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio-text {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 30px;
+            color: white;
+            background: linear-gradient(transparent, rgba(0,0,0,0.9));
+        }
+
+        .portfolio-text h3 {
+            font-family: Georgia, serif;
+            font-size: 25px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .skills-text span {
+            color: #777;
+            font-size: 13px;
+            letter-spacing: 3px;
+        }
+
+        .skills-text h2 {
+            font-family: Georgia, serif;
+            font-size: 48px;
+            line-height: 1.2;
+            margin: 15px 0 20px;
+        }
+
+        .skills-text p {
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 35px;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .line {
+            width: 100%;
+            height: 5px;
+            background: #eee;
+        }
+
+        .line1 {
+            width: 85%;
+            height: 5px;
+            background: #111;
+        }
+
+        .line2 {
+            width: 70%;
+            height: 5px;
+            background: #111;
+        }
+
+        .line3 {
+            width: 60%;
+            height: 5px;
+            background: #111;
+        }
+
+        .skills-image img {
+            height: 500px;
+            object-fit: cover;
+        }
+
+        .testimonial {
+            background: #f7f7f7;
+            text-align: center;
+        }
+
+        .testimonial-box {
+            max-width: 750px;
+            margin: auto;
+        }
+
+        .quote {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .testimonial-box p {
+            font-family: Georgia, serif;
+            font-size: 25px;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .testimonial-box span {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 35px;
+        }
+
+        .blog-box {
+            border: 1px solid #eee;
+        }
+
+        .blog-box img {
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .blog-text {
+            padding: 30px;
+        }
+
+        .blog-text span {
+            color: #888;
+            font-size: 13px;
+        }
+
+        .blog-text h3 {
+            font-family: Georgia, serif;
+            font-size: 27px;
+            line-height: 1.3;
+            margin: 12px 0;
+        }
+
+        .blog-text p {
+            color: #777;
+        }
+
+        .blog-text a {
+            display: inline-block;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .contact {
+            background: #f6f6f6;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+        }
+
+        .contact-text span {
+            color: #777;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        .contact-text h2 {
+            font-family: Georgia, serif;
+            font-size: 50px;
+            line-height: 1.2;
+            margin: 15px 0 25px;
+        }
+
+        .contact-text p {
+            color: #777;
+            line-height: 1.8;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px 5px;
+            border: 0;
+            border-bottom: 1px solid #ccc;
+            background: transparent;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: fit-content;
+            padding: 15px 30px;
+            background: #111;
+            color: white;
+            border: 0;
+            cursor: pointer;
+        }
+
+        .footer {
+            background: #111;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            padding-bottom: 70px;
+        }
+
+        .footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .footer h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer p,
+        .footer a {
+            color: #999;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subscribe {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .subscribe input {
+            width: 100%;
+            padding: 13px;
+            background: transparent;
+            border: 1px solid #444;
+            color: white;
+        }
+
+        .subscribe button {
+            width: 50px;
+            border: 0;
+            background: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #292929;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .copyright p {
+            color: #777;
+        }
+
+      
+
+            .portfolio-box img {
+                height: 300px;
+            }
+
+            .skills-image img,
+            .about-image img {
+                height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        
+
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container nav">
+
+        <div class="logo">
+            MONOLINE
+        </div>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#blog">Blog</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+<section class="hero" id="home">
+
+    <div class="container hero-content">
+
+        <span>DIGITAL AGENCY</span>
+
+        <h1>
+            We are a full service
+            digital company
+        </h1>
+
+        <p>
+            We create meaningful digital experiences
+            that help brands grow and connect with
+            their audience.
+        </p>
+
+        <a href="#about" class="btn">
+            Learn More →
+        </a>
+
+    </div>
+
+</section>
+
+<section class="section services" id="services">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span>OUR SERVICES</span>
+
+            <h2>What we do</h2>
+
+            <p>
+                We provide creative and digital solutions
+                for modern businesses.
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-box">
+                <div class="icon">⌕</div>
+                <h3>UX Research</h3>
+                <p>
+                    We research users and create experiences
+                    that are simple, useful and enjoyable.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">✎</div>
+                <h3>Brand Identity</h3>
+                <p>
+                    We build strong and memorable identities
+                    that represent your business.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">‹›</div>
+                <h3>Web Development</h3>
+                <p>
+                    Modern, responsive and high-performance
+                    websites for your business.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">↗</div>
+                <h3>Business Strategy</h3>
+                <p>
+                    Smart strategies that help your company
+                    reach its goals.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">▣</div>
+                <h3>Web Design</h3>
+                <p>
+                    Beautiful and functional interfaces
+                    designed for modern users.
+                </p>
+            </div>
+
+            <div class="service-box">
+                <div class="icon">◉</div>
+                <h3>Photography</h3>
+                <p>
+                    Professional visual content that
+                    makes your brand stand out.
+                </p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="counter">
+
+    <div class="container counter-grid">
+
+        <div class="counter-box">
+            <h2>32652</h2>
+            <p>Happy Customers</p>
+        </div>
+
+        <div class="counter-box">
+            <h2>21821</h2>
+            <p>Project Done</p>
+        </div>
+
+        <div class="counter-box">
+            <h2>5660</h2>
+            <p>In Business</p>
+        </div>
+
+        <div class="counter-box">
+            <h2>11859</h2>
+            <p>Support Cases</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80">
+
+        </div>
+
+        <div class="about-text">
+
+            <span>ABOUT US</span>
+
+            <h2>
+                We create amazing
+                digital products
+            </h2>
+
+            <p>
+                We combine strategy, design and technology
+                to create digital experiences that make
+                businesses successful.
+            </p>
+
+            <p>
+                Our team works with businesses to create
+                beautiful and useful digital products.
+            </p>
+
+            <a href="#" class="btn">
+                Learn More →
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section portfolio" id="portfolio">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span>LATEST WORKS</span>
+
+            <h2>Our Portfolio</h2>
+
+            <p>
+                Some of our recent creative projects.
+            </p>
+
+        </div>
+
+        <div class="portfolio-menu">
+
+            <button>All</button>
+            <button>Branding</button>
+            <button>Web Template</button>
+            <button>SEO</button>
+            <button>Digital Marketing</button>
+
+        </div>
+
+        <div class="portfolio-grid">
+
+            <div class="portfolio-box">
+
+                <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=900&q=80">
+
+                <div class="portfolio-text">
+                    <h3>Creative Branding</h3>
+                    <p>View Project →</p>
+                </div>
+
+            </div>
+
+            <div class="portfolio-box">
+
+                <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=900&q=80">
+
+                <div class="portfolio-text">
+                    <h3>Web Design</h3>
+                    <p>View Project →</p>
+                </div>
+
+            </div>
+
+            <div class="portfolio-box">
+
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=900&q=80">
+
+                <div class="portfolio-text">
+                  <h3>Digital Marketing</h3>
+                    <p>View Project →</p>
+                </div>
+
+            </div>
+
+            <div class="portfolio-box">
+
+                <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?auto=format&fit=crop&w=900&q=80">
+
+                <div class="portfolio-text">
+                    <h3>Brand Identity</h3>
+                    <p>View Project →</p>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section">
+
+    <div class="container skills-grid">
+
+        <div class="skills-text">
+
+            <span>OUR SKILLS</span>
+
+            <h2>
+                Generating New Ideas.
+                Solving Big Problems.
+            </h2>
+
+            <p>
+                We use creativity, technology and strategy
+                to solve difficult business problems.
+            </p>
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Web Design</span>
+                    <span>85%</span>
+                </div>
+
+                <div class="line">
+                    <div class="line1"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Branding</span>
+                    <span>70%</span>
+                </div>
+
+                <div class="line">
+                    <div class="line2"></div>
+                </div>
+
+            </div>
+
+            <div class="skill">
+
+                <div class="skill-name">
+                    <span>Mobile App</span>
+                    <span>60%</span>
+                </div>
+
+                <div class="line">
+                    <div class="line3"></div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="skills-image">
+
+            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=900&q=80">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section testimonial">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span>TESTIMONIAL</span>
+
+            <h2>From Our Client</h2>
+
+        </div>
+
+        <div class="testimonial-box">
+
+            <div class="quote">❝</div>
+
+            <p>
+                It is a long established fact that a reader
+                will be distracted by readable content.
+                We are extremely happy with the service.
+            </p>
+
+            <h3>Alex Chohan</h3>
+
+            <span>Director, Accurate Themes</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="blog">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <span>OUR BLOG</span>
+
+            <h2>Latest News</h2>
+
+        </div>
+
+        <div class="blog-grid">
+
+            <div class="blog-box">
+
+                <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80">
+
+                <div class="blog-text">
+
+                    <span>Sep 01, 2026 · Design</span>
+
+                    <h3>
+                        How can use our latest
+                        news by Monoline
+                    </h3>
+
+                    <p>
+                        Learn more about design,
+                        technology and creativity.
+                    </p>
+
+                    <a href="#">Read More →</a>
+
+                </div>
+
+            </div>
+
+            <div class="blog-box">
+
+                <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=900&q=80">
+
+                <div class="blog-text">
+
+                    <span>Sep 02, 2026 · Agency</span>
+
+                    <h3>
+                        Learning and growing
+                        in the first year
+                    </h3>
+
+                    <p>
+                        Discover ideas and strategies
+                        for growing your business.
+                    </p>
+
+                    <a href="#">Read More →</a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+    <div class="container contact-grid">
+
+        <div class="contact-text">
+
+            <span>CONTACT US</span>
+
+            <h2>
+                Say Hello,
+                Let's Start Something New
+            </h2>
+
+            <p>
+                Have a project in mind?
+                Let's work together and create
+                something amazing.
+            </p>
+
+        </div>
+
+        <form class="contact-form">
+
+            <input type="text" placeholder="Name">
+
+            <input type="email" placeholder="Email">
+
+            <input type="text" placeholder="Subject">
+
+            <textarea rows="6" placeholder="Message"></textarea>
+
+            <button type="submit">
+                Send Message →
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h2>MONOLINE</h2>
+
+            <p>
+                We create meaningful digital experiences
+                for modern businesses.
+            </p>
+
+            <div class="social">
+
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">in</a>
+                <a href="#">i</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Company</h3>
+
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Jobs</a>
+            <a href="#">Licenses</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div>
+
+            <h3>Subscribe</h3>
+
+            <p>
+                Subscribe for latest updates.
+            </p>
+
+            <div class="subscribe">
+
+                <input type="email" placeholder="Your Email">
+
+                <button>→</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Monoline. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>  +
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.box{
+    background-color: black;
+    width: 250px;
+    height: 250px;
+    border: solid;
+    border-radius: 20px;
+    justify-content: center;
+    text-align: center;
+    padding:20px;
+    display: flex;
+    flex-direction: column;
+    margin: 30%;
+}
+input{
+    padding: 10px;
+    width:100px;
+   
+
+}
+select{
+    padding: 10px;
+    width:100px;
+}
+button{
+    padding: 10px;
+    width:100px;
+}
+
+    </style>
+</head>
+<body><div class="box">
+    <input type="number" id="num1" placeholder="enter your first number">
+    <br>
+    <select id="operator">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    
+    </select>
+    <br>
+
+    <input type="number" id="num2" placeholder="enter second number">
+    <br>
+
+        <button onclick="handleCalculater()">cal=</button>
+        <p id="finalResult">loading...</p>
+        </div>
+    <script>
+    // let day = 3;
+    // switch (day){
+    //     case 1:
+    //         console.log("monday");
+    //     break;
+    //     case 2:
+    //         console.log("tuesday");
+    //             case 3:
+    //                 console.log("invalid day");
+    // }
+
+function calculater(num1, op, num2){
+    let result;
+    switch (op) {
+        case "+":
+        result = num1 + num2;
+        break;
+    
+        case "-":
+            result = num1 - num2;
+            break;
+        case "*":
+            result = num1 * num2;
+            break;
+        case "/":
+                result = num1 / num2;
+                break;
+        case "/":
+            if(num2 === 0) return"cannot divide by zero";
+                result = num1 / num2 ;
+                break;
+                default:
+                    return "invalid value";
+    
+    }
+    return result;
+
+}
+   function handleCalculater(){
+    let val1 = Number(document.querySelector("#num1").value);
+    let op = document.querySelector("#operator").value;
+
+    let val2 = Number(document.querySelector("#num2").value);
+    const output = calculater(val1, op, val2);
+    document.querySelector("#finalResult").innerText="Result : "+ output;
+   }
+    
+
+
+    </script>
+</body>
+</html>

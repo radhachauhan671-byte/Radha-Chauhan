@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#555;
+}
+nav{
+    height:70px;
+    padding:0 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:white;
+}
+.logo{
+    color:#2b8fc9;
+    font-size:24px;
+}
+ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#555;
+}
+.menu{
+    display:none;
+    font-size:28px;
+}
+@media(max-width:500px){
+    ul{
+        display:none;
+    }
+    .menu{
+        display:block;
+    }
+    nav{
+        padding:0 20px;
+    }
+}
+</style>
+</head>
+<body>
+    <nav>
+    <div class="logo">DUNESH DUTT</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">What I Do</a></li>
+        <li><a href="#testimonials">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu">☰</div>
+</nav>
+
+
+<section class="hero">
+
+
+    <div class="hero-left">
+        <p>Hello, I'm </p>
+            <h1 class="name"><span class="white">GUNESH </span><span class="gray"> DUTT</span></h1>
+
+        <h2 class="typing">I'm a <span> Full Stack Developer</span></h2>
+
+        <p class="discription">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Architecto facere ut optio magnam fugiat 
+        assumenda corporis nihil repellat odit repellendus!
+        </p>
+        <div class="bottom-row">
+            <div class="e-mail">
+                <div class="email-icon">✉️</div>
+                webgyaan.hub@gmail.com
+            </div>
+            <div class="social">Git</div>
+            <div class="social">in</div>
+            <div class="social">©</div>
+            <div class="social">📞</div>
+        </div>
+
+    </div>
+
+    <div class="hero-right">
+        <div class="circle">GUNESH DUTT</div>
+        <img src="/" palceholder="image">
+    </div>
+
+
+
+</section>
+    
+</body>
+</html>

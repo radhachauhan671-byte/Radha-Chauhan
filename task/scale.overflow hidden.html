@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .mainBox{
+        width: 300px;
+        height:300px;
+        margin: 25%;
+        overflow: hidden;
+        align-items: center;
+        background-color: black;
+    
+
+    }
+     img{
+        transition: all 0.3s linear ;
+        width: 200px;
+        height: 200px;
+        margin: 15%;
+    }
+    img:hover{
+        transform: scale(2);
+    }
+    .mainBox2{
+        width: 300px;
+        height:300px;
+        margin: 25%;
+        align-items: center;
+        background-color: rgb(153, 167, 229);
+        overflow: hidden;
+    }
+    .mainBox2 img{
+             transition: all o.9s linear ;
+    }
+
+    .mainBox2 img:hover{
+        transform: rotate(90deg);
+        
+    }
+    
+
+    .mainBox3{
+        width: 300px;
+        height:300px;
+        margin: 25%;
+        align-items: center;
+        background-color: rgb(55, 50, 50);
+        overflow: hidden;
+    }
+    .mainBox3 img{
+             transition: all o.9s linear ;
+    }
+
+    .mainBox3 img:hover{
+        transform: skew(90deg);
+        
+    }
+    .mainBox4{
+        width: 300px;
+        height:300px;
+        margin: 25%;
+        align-items: center;
+        background-color: rgb(210, 188, 147);
+        overflow: hidden;
+        
+    }
+    .mainBox4 img{
+             transition: all 0.9s linear ;
+        transform-origin: top left;
+
+             
+    }
+ 
+    .mainBox4:hover img{
+        /* transform: translateX(100px); */
+
+        transform: rotate(120deg);
+        
+    }
+</style>
+<body>
+    <div class="mainBox">
+        <img src="/img/nature.jpg">
+    </div>
+    
+
+
+    <div class="mainBox2">
+        <img src="/img/COMPUTER.jpeg">
+
+    </div>
+
+    <div class="mainBox3">
+        <img src="/img/grapes.jpeg">
+
+    </div>
+
+    <div class="mainBox4">
+        <img src="/img/foodie.png">
+
+    </div>
+</body>
+</html>

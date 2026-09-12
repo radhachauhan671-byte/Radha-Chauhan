@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            border: solid;
+            border-color: red;
+            background-color: palevioletred;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <p>loading..</p>
+    <button onclick="fun()">click me</button>
+    <div class ="box1"></div>
+    <script>
+        // let btn = document.querySelector("button");
+        // btn.addEventListener("click",() => {
+        //     document.querySelector("p").innerHTML = "radha dagar";
+        // });
+
+        const magic = document.querySelector(".box1");
+        magic.classList.add("box");
+        const heading = document.createElement("h1");
+        heading.innerHTML = "Hello javaScript";
+        magic.appendChild(heading);
+        //magic.removechild(heading);
+
+
+
+    </script>
+</body>
+</html>

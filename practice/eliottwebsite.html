@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        nav{
+    height:70px;
+    padding:0 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:white;
+}
+.logo{
+    color:#2b8fc9;
+    font-size:24px;
+}
+ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#555;
+}
+
+.bar{
+    display: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px){
+    ul{
+        display: none;
+    }
+    .bar{
+        display: block;
+    }
+    .mainparent{
+        flex-direction: column;
+        gap: 30px;
+
+    }
+.parent{
+    width: 100%;
+}
+.parentimg{
+    width: 100%;
+}
+.parentimg img{
+    width: 280px;
+    height: 280px;
+}
+.button{
+    gap:10px;
+}
+}
+.mainparent{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 200px;
+    width: 100%;
+}
+.parent{
+    width: 50%;
+    background-color:black;
+    color: white;
+padding: 60px;
+}
+.mainroot{
+    height: 250px;
+    width:50%;
+    justify-content: center;
+    display: flex;
+    gap: 90px; 
+
+}
+.parentimg{
+    width: 50%;
+    justify-content: center;
+    display: flex;
+}
+.parentimg img{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+
+}
+.mainroot{
+    display:flex;
+    flex-direction: column;
+}
+.root1{
+display: flex;
+flex-direction: column;
+}
+.root2{
+display: flex;
+flex-direction: column;
+}
+.root3{
+display: flex;
+flex-direction: column;
+}
+.button{
+    display: flex;
+    gap:30px;
+}
+.button button{
+    height: 40px;
+
+    padding: 10px;
+    display: flex;
+    border-radius:20px;
+    
+}
+    </style>
+</head>
+<body>
+    <nav>
+    <div class="logo">ELIOTT</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">What We Do</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="bars">
+        <i class="fa-solid fa-bars"></i>
+
+    </div>
+</nav>
+<div class="mainparent">
+<div class="parent">
+    <div class="firstroot">
+<h3>ALAILABLE FOR WORK </h3>
+<h1>Hi, I'm Radha </h1>
+<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati dolorum qui dolores laborum ipsa mollitia tenetur doloribus quod nihil aperiam?</p></div>
+<div class="button">
+<button>View my work</button>
+<button>get in touch</button>
+</div>
+<hr>
+<div class="mainroot">
+<div class="root1">
+    <h1>28+</h1>
+    <p>project done</p>
+</div>
+<div class="root2">
+    <h1>28+</h1>
+    <p>project done</p>
+</div>
+<div class="root3">
+    <h1>2+</h1>
+    <p> experinces</p>
+</div>
+</div>
+<div class="parentimg">
+
+<img src="/img/WhatsApp Image 2026-07-30 at 11.59.57 AM.jpeg">
+
+</div>
+
+</div>
+
+</body>
+</html>

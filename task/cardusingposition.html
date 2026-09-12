@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    *{
+        margin: 0;
+        padding:0;
+        box-sizing: border-box
+    
+    }
+    body{
+        align-items: center;
+    }
+    .parentcard{
+    justify-content: center;
+background-color: transparent;
+color: white;
+/* height: 650px; */
+width:600px;
+display: flex;
+flex-direction: column;
+gap: 10px;
+position: relative;
+
+}
+
+
+.maincard{
+margin: 40px;
+    height:500px ;
+    width: 450px;
+    border: solid;
+    border-color: rgb(27, 12, 116);
+    border-radius: 50px;
+}
+.card{
+justify-content: center;
+text-align: center;
+border-color: black;
+
+}
+.card img{
+    width: 400px;
+    height: 250px;
+    border-radius: 50px;
+    margin:20px ;
+}
+.card h1{
+font-size: 35px;
+margin: 10px;
+
+}
+
+.card button{
+    padding: 20px;
+    width:80%;
+    border-radius: 20px;
+    margin: 10px;
+    background-color: rgb(34, 47, 144);
+    color: white;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin:50px;
+    border: solid;
+    border-radius: 40px;
+    height:100px;
+    width:80%;
+    border-color: black;
+}
+.center{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 10px;
+    color: black;
+}
+
+.logo img{
+    margin: 10px 10px 10px -30px;
+    height: 50px;
+    width: 50px;
+    border-radius: 100px;
+    margin-left: -100px;
+    width:40px;
+    border-radius: 100px;
+}
+
+
+
+.num{
+    width: 40px;
+
+    height: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    background-color: rgb(242, 31, 31);
+
+}
+.num1{
+top:20% ;
+left:5%;
+}
+
+.num2{
+    top:43%;
+    left:27%;
+}
+.num3{
+    right:30%;
+    top:50%;
+}
+.num4{
+    right:20%;
+    top:55%;
+}
+.num5{
+    right:90%;
+    top:85%
+}
+.num6{
+    right:5% ;
+    top:85%
+
+}
+
+</style>
+
+</head>
+<body>
+
+
+
+    <div class="parentcard">
+
+        <div class="circle">
+<div class="num num1" >1</div>
+<div class="num num2" >2</div>
+<div class="num num3" >3</div>
+<div class="num num4" >4</div>    
+<div class="num num5" >5</div>
+<div class="num num6" >6</div>
+
+
+</div>
+
+    <div class="maincard">
+        <div class="card">
+            <img src="/img/strawberries.jpeg">
+            <h1>heading</h1>
+            <p>This is a short discription this card.</p>
+            <button>ACTION</button>
+
+        </div>
+
+    </div>
+    <div class="box">
+    
+<div class="logo">
+    <img src="/img/WhatsApp Image 2026-07-30 at 11.59.57 AM.jpeg">
+</div>
+
+    <div class="center">
+    <h2>heading</h2>
+    <p>subheading</p>
+
+</div>
+    </div>
+
+</div>
+
+
+</body>
+</html>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  nav{
+    width: 100%;
+    border: none;
+    padding: 20px;
+    display: flex;
+    gap: 300px;
+    background-color: antiquewhite;
+    position: sticky;
+  }
+  .logo{
+    border: solid;
+    width: 50px;
+    height:30px;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+ul{
+  list-style: none;
+  display:none;
+  gap: 20px;
+
+}
+button{
+  width: 100px;
+  height: 50px;
+  border-radius: 20px;
+  border: 1px;
+  display: none;
+  padding: 10px;
+  
+  
+  
+}
+.menu{
+  width: 30px;
+  display: flex;
+  padding: 5px;;
+  justify-content: space-around;
+  margin-left: 300px;
+
+}
+.root{
+position: relative;
+width: 100%;
+margin-top: 20px;
+}
+.para{
+  width: 400px;
+  height: 230px;
+  background-color: white;
+  border-radius: 10px;
+  justify-content: space-around;
+  padding: 10px;
+  position: absolute;
+  z-index: 2;
+  left: 0px ;
+  top: 0px;
+  bottom: auto;
+  min-width: 170px;
+  border: transparent;
+  
+}
+h4{
+  font-size: small;
+  margin: 10px;
+}
+p{
+  font-size: 30px;
+  font-weight: bold;
+}
+.hiyaButton{
+  background-color: black;
+  color: white;
+  display: flex;
+  margin-top: 10px;
+}
+.video video{
+  display :block;
+width: 104%;
+height: auto;
+}
+.hero{
+  display: flex;
+  gap: 100px;
+}
+.paragraph{
+  font-weight: bold;
+  font-size:30px;
+
+}
+.btn{
+  background-color: black;
+  color : white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap:20px;
+}
+@media only screen and (min-width:500px){
+  ul{
+    display: flex;
+    align-items: center;
+  }
+  .menu{
+    display: none;
+  }
+  button{
+    display: flex;
+  }
+}
+</style>
+<body>
+  <nav>
+    <div class="logo">shape.</div>
+    <ul>
+      <li>Services</li>
+      <li>about</li>
+      <li>blog</li>
+      <li>content</li>
+    </ul>
+    <button>start a project</button>
+    <button class="menu">⇶</button>
+  </nav>
+
+  <div class="root">
+    <div class="para">
+<h4>•Hiya, we are shape 👋</h4>
+<p>A web design and branding agency in manchaster</p>
+<button class="hiyaButton">view Our Work ↗</button>
+
+</div>
+<div class="video">
+  <video class="hero-video" autoplay muted loop playsinline poster= video class="w-full h-full absolute top-0 left-0 object-cover playsinline=" autoplay="" loop="" muted="" loading="lazy">
+<source src="https://servd-made-byshape.b-cdn.net/production/uploads/videos/showreel-2024-portrait_cropped.mp4" type="video/mp4" media="(max-width: 1023px)">
+<source src="https://servd-made-byshape.b-cdn.net/production/uploads/videos/shape-showreel-2024_looping-v3.mp4" type="video/mp4" media="(min-width: 1024px)"></video>">
+      <source src="VIDEO_URL_HERE.mp4" type="video/mp4">
+    </video>
+</div>
+  </div>
+  <section class="hero">
+    <h4> •who are we ?</h4>
+  
+  <div class="paragraph">
+    An independent web design and branding agency in Manchester set up in 2010 who care, build relationships, have industry experience, and win awards.
+
+<button class="btn">about shape ↗</button>
+<button class="btn">meet the team ↗</button>
+  </div>
+  
+</section>
+</body>
+</html>

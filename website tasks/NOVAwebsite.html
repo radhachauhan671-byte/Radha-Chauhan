@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Nova</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #fff;
+        }
+
+        .container .hero-grid{
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+            background-image: url(/img/COMPUTER.jpeg);
+            
+        }
+        .hero-text{
+            background-image: url(/img/COMPUTER.jpeg);
+            width: 1000px;
+            height: 600px;
+        }
+    
+
+        .section {
+            padding: 90px 0;
+            
+        }
+
+        .heading {
+            text-align: center;
+            max-width: 650px;
+            margin: 0 auto 50px;
+            backdrop-filter: blur(10px);
+        }
+
+        .heading p {
+            color: #777;
+            line-height: 1.7;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #635bff;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        .header {
+            width: 100%;
+            height: 80px;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .nav {
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #635bff;
+        }
+
+        .menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .menu a {
+            font-size: 15px;
+        }
+
+        .menu a:hover {
+            color: #171289;
+        }
+
+        .hero {
+            min-height: 650px;
+            padding-top: 80px;
+            background:transparent;
+            display: flex;
+            align-items: center;
+        }
+
+        .about-image{
+            height: 500px;
+            width: 100%;
+
+
+
+        }
+        .hero-grid {
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .hero-text h1 {
+            font-size: 58px;
+            line-height: 1.15;
+            margin-bottom: 20px;
+            backdrop-filter: blur(20px);
+        }
+
+        .hero-text p {
+            color: #121213;
+            backdrop-filter: blur(20px);
+            line-height: 1.8;
+            max-width: 550px;
+        }
+
+        .service-grid {
+            display: flex;
+            gap: 30px;
+        }
+
+        .service-box {
+            padding: 35px 25px;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .service-box:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+        }
+
+        .icon {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            background: #f0efff;
+            color: #635bff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 25px;
+        }
+
+        .service-box h3 {
+            font-size: 21px;
+            margin-bottom: 12px;
+        }
+
+        .service-box p {
+            color: #777;
+            line-height: 1.7;
+            font-size: 14px;
+        }
+
+        .about {
+            background-image: url(/Nova - Bootstrap 5 Template/imgi_3_about-img.svg);
+        }
+
+        .about-grid {
+            display: flex;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .about-image img {
+            height: 500px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .about-text h2 {
+            font-size: 45px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #777;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        .about-list {
+            list-style: none;
+            margin-top: 25px;
+        }
+
+        .about-list li {
+            margin-bottom: 12px;
+        }
+
+        .about-list li::before {
+            content: "✓";
+            color: #635bff;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .pricing {
+            background: #f7f8fc;
+        }
+
+        .pricing-grid {
+            display: flex;
+            gap: 30px;
+        }
+
+        .price-box {
+            height: 600px;
+            width: 400px;
+            background: white;
+            padding: 40px 30px;
+            border-radius: 8px;
+            text-align: center;
+            border: 1px solid #eee;
+        }
+
+        .price-box.active {
+            background: #635bff;
+            color: white;
+        }
+
+        .price-box h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .price-box h4 {
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+
+        .price {
+            font-size: 42px;
+            font-weight: bold;
+            margin-bottom: 25px;
+        }
+
+        .price-box ul {
+            list-style: none;
+            margin-bottom: 25px;
+        }
+
+        .price-box li {
+            padding: 9px 0;
+            color: #777;
+        }
+
+        .price-box.active li {
+            color: #eee;
+        }
+
+        .price-box .btn {
+            background: #111;
+        }
+
+        .price-box.active .btn {
+            background: white;
+            color: #635bff;
+        }
+
+        .contact {
+            background: rgb(213, 224, 245);
+        }
+
+        
+
+        .contact-text h2 {
+            font-size: 45px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        .contact-text p {
+            color: #777;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            margin-top: 30px;
+        }
+
+        .contact-info p {
+            margin-bottom: 12px;
+            color: #555;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            outline: none;
+            font-family: Arial, sans-serif;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form button {
+            width: fit-content;
+            border: 0;
+            cursor: pointer;
+            background: #635bff;
+            color: white;
+            padding: 14px 30px;
+            border-radius: 5px;
+        }
+ 
+        .company-icons img{
+            font-size: 50px;
+            width: 700px;
+            height: 200px;
+        }
+
+
+
+
+
+        .footer {
+            background: #111827;
+            color: white;
+            padding-top: 70px;
+        }
+
+
+        .footer-logo {
+            width: 200px;
+            margin-bottom: 20px;
+        }
+
+        .footer p {
+            color: #999;
+            line-height: 1.8;
+            font-size: 14px;
+        }
+
+        .footer h3 {
+            margin-bottom: 20px;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-column a {
+            color: #999;
+            font-size: 14px;
+        }
+
+        .footer-column a:hover {
+            color: white;
+        }
+
+        .social {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .copyright {
+            border-top: 1px solid #292929;
+            text-align: center;
+            padding: 25px;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+
+<header class="header">
+
+    <div class="container nav">
+
+        <div class="logo">
+            <img src="/Nova - Bootstrap 5 Template/imgi_1_logo.svg">
+        </div>
+
+        <ul class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+    </div>
+
+</header>
+
+<section class="hero" id="home">
+
+    <div class="container hero-grid">
+
+        <div class="hero-text">
+
+            <h1>
+                We help you build
+                your dream website
+            </h1>
+
+            <p>
+                Stop wasting time and money designing and
+                managing a website that doesn't get results.
+                We create modern digital solutions for your
+                business.
+            </p>
+
+            <a href="#services" class="btn">
+                Get Started
+            </a>
+
+        </div>
+
+        <div class="hero-image">
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section" id="services">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <h2>Specializing In</h2>
+
+            <p>
+                Stop wasting time and money designing and
+                managing a website that doesn't get results.
+            </p>
+
+        </div>
+
+        <div class="service-grid">
+
+            <div class="service-box">
+
+                <div class="icon">✎</div>
+
+                <h3>Graphics Design</h3>
+
+                <p>
+                    Short description for the ones
+                    who look for something new.
+                </p>
+
+            </div>
+
+            <div class="service-box">
+
+                <div class="icon">▣</div>
+
+                <h3>Print Design</h3>
+
+                <p>
+                    Short description for the ones
+                    who look for something new.
+                </p>
+
+            </div>
+
+            <div class="service-box">
+
+                <div class="icon">▤</div>
+
+                <h3>Business Analysis</h3>
+
+                <p>
+                    Short description for the ones
+                    who look for something new.
+                </p>
+
+            </div>
+
+            <div class="service-box">
+
+                <div class="icon">‹›</div>
+
+                <h3>Web Development</h3>
+
+                <p>
+                    Short description for the ones
+                    who look for something new.
+                </p>
+
+            </div>
+
+            <div class="service-box">
+
+                <div class="icon">✓</div>
+
+                <h3>Best Security</h3>
+
+                <p>
+                    Short description for the ones
+                    who look for something new.
+                </p>
+
+            </div>
+
+            <div class="service-box">
+
+                <div class="icon">◈</div>
+
+                <h3>Web Design</h3>
+
+                <p>
+                    Short description for the ones
+                    who look for something new.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section about" id="about">
+
+    <div class="container about-grid">
+
+        <div class="about-image">
+
+            <img src="/Nova - Bootstrap 5 Template/imgi_3_about-img.svg">
+
+        </div>
+
+        <div class="about-text">
+
+            <h2>
+                The future of designing starts here
+            </h2>
+
+            <p>
+                Stop wasting time and money designing and
+                managing a website that doesn't get results.
+            </p>
+
+            <ul class="about-list">
+
+                <li>
+                    Modern and responsive design
+                </li>
+
+                <li>
+                    Easy to use and customize
+                </li>
+
+                <li>
+                    Professional digital solutions
+                </li>
+
+            </ul>
+
+            <a href="#" class="btn">
+                Learn More
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section pricing" id="pricing">
+
+    <div class="container">
+
+        <div class="heading">
+
+            <h2>Pricing Plan</h2>
+
+            <p>
+                Choose the plan that works best
+                for your business.
+            </p>
+
+        </div>
+
+        <div class="pricing-grid">
+
+            <div class="price-box">
+
+                <h3>Basic Design</h3>
+
+                <h4>Web Design</h4>
+
+                <div class="price">
+                    $29
+                </div>
+
+                <ul>
+                    <li>Carefully crafted components</li>
+                    <li>Amazing page examples</li>
+                    <li>Friendly support team</li>
+                    <li>Awesome Support</li>
+                </ul>
+
+                <a href="#" class="btn">
+                    Get Started
+                </a>
+
+            </div>
+
+            <div class="price-box active">
+
+                <h3>Standard Design</h3>
+
+                <h4>Web Development</h4>
+
+                <div class="price">
+                    $89
+                </div>
+
+                <ul>
+                    <li>Carefully crafted components</li>
+                    <li>Amazing page examples</li>
+                    <li>Friendly support team</li>
+                    <li>Awesome Support</li>
+                </ul>
+
+                <a href="#" class="btn">
+                    Get Started
+                </a>
+
+            </div>
+
+            <div class="price-box">
+
+                <h3>Pro Design</h3>
+
+                <h4>Design & Develop</h4>
+
+                <div class="price">
+                    $199
+                </div>
+
+                <ul>
+                    <li>Carefully crafted components</li>
+                    <li>Amazing page examples</li>
+                    <li>Friendly support team</li>
+                    <li>Awesome Support</li>
+                </ul>
+
+                <a href="#" class="btn">
+                    Get Started
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="section contact" id="contact">
+
+    <div class="container contact-grid">
+
+        <div class="contact-text">
+
+            <h2>
+                Get in touch
+            </h2>
+
+            <p>
+                Stop wasting time and money designing and
+                managing a website that doesn't get results.
+            </p>
+
+            <div class="contact-info">
+
+                <p>📞 +004389478327</p>
+
+                <p>✉️ yourmail@gmail.com</p>
+
+                <p>📍 John's House, 13/5 Road, Sidny</p>
+
+            </div>
+
+        </div>
+
+        <form class="contact-form">
+
+            <input
+                type="text"
+                placeholder="Name">
+
+            <input
+                type="email"
+                placeholder="Email">
+
+            <input
+                type="text"
+                placeholder=" Mob. Number">
+
+            <input
+                type="text"
+                placeholder="Subject">
+
+            <textarea
+                rows="6"
+                placeholder="Message"></textarea>
+
+            <button type="submit">
+                Submit
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<div class="brand-svg">
+<div class="company-icons">
+<img src="/Nova - Bootstrap 5 Template/imgi_4_brands.svg">
+
+</div>
+</div>
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <div class="footer-logo">
+                <img src="/Nova - Bootstrap 5 Template/imgi_1_logo.svg">
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit amet,
+                consectetur adipiscing elit.
+                Facilisis nulla placerat amet.
+            </p>
+
+            <div class="social">
+
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">in</a>
+                <a href="#">i</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Quick Link</h3>
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#services">Service</a>
+            <a href="#contact">Contact</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Services</h3>
+
+            <a href="#">Web Design</a>
+            <a href="#">Web Development</a>
+            <a href="#">SEO Optimization</a>
+            <a href="#">Blog Writing</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Download App</h3>
+
+            <a href="#"> 🍎App Store</a>
+            <a href="#"> 🤖Play Store</a>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © 2026 Nova. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>

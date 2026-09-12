@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>thomson website</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            
+        }
+        main{
+            padding:0 50px;
+        }
+        nav{
+            display: flex;
+            background-color: white;
+            box-shadow: 1opx 10px 10px white;
+            height: 30px;
+            width: 100%;
+            border: transparent;
+            padding: 20px;
+        }
+        .logo img{
+
+            width: 100px;
+            justify-content: space-around;
+            margin-right: 30px;
+        
+        }
+        ul{
+            list-style-type: none;
+            display: none;
+            gap: 30px;
+            font-weight: bold;
+        }
+    
+        
+        .btn{
+            justify-content: center;
+            text-align: center;
+            padding: 5px;
+            display: flex;
+            width: 30px;
+            height: 30px;
+            margin-left: 30px;
+            background-color: black;
+            color: white;
+            
+        }
+        .mainbox{
+            margin-top: 50px;
+            margin-bottom: 50px;
+
+        }
+        .mainbox span{
+            color: orangered;
+            
+        }
+         .mainbox h1{
+             margin-bottom: 20px;
+        }
+        .mainbox p{
+                line-height: 1.8;
+                color: gray;
+        }
+
+        .active{
+                color: orangered;
+            }
+        
+        #webUl{
+            list-style-type: none;
+            display: flex;
+            gap: 30px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .images{
+            display: flex;
+            flex-wrap:wrap;
+            gap:10px;
+            justify-content: center;
+            
+        }
+        
+            .imgBox{
+                position: relative;
+                width: 300px;
+                height: 300px;
+                overflow: hidden;
+
+            }
+            .imgBox img{
+                width: 100%;
+                height: 100%;
+                display: block;
+            }
+        .afterHover{
+            position: absolute;
+           top:0;
+            left:15px;
+            width: 100%;
+            height: 100%;
+            backdrop-filter: blur(5px);
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            justify-content: end;
+            gap: 10px;
+            transition: all 0.2s linear;
+            transform: translateX(-105%);
+        }
+        .imgBox:hover .afterHover{
+            transform: translateX(0);
+        }
+    
+        .afterHover button{
+            padding: 8px 20px;
+            border: none;
+            cursor: pointer;
+            left:0;
+            background-color: black;
+            color: aliceblue;
+        }
+            
+        
+
+
+        .core-services{
+            margin: 10px;
+            margin-top:20px;
+            margin-bottom:30px;
+        }
+        .functions{
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+        .main-functions {
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                line-height: 1.8;
+            }
+            .main-functions p{
+                color: gray;
+            }
+            .footer{
+                background-color: black;
+                color: gray;
+                height: 100px;
+                align-items: center;
+                justify-content: center;
+            }
+            .footer span{
+                color: white;
+            }
+
+
+
+        @media only screen and (min-width:500px){
+            ul{
+                display:flex;
+                align-items : center;
+            }
+            .btn{
+                display: none;
+            }
+        
+    
+}
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo"><img src="/img/imgi_1_logo.png"></div>
+        <ul>
+            <li>about</li>
+            <li>portfolio</li>
+            <li>blog</li>
+            <li>contant</li>
+  
+        </ul>
+        <button class="btn">Ξ</button>
+    </nav>
+    <div class="mainbox">
+        <h1>I provide<br>
+            <span>Design Content.</span></h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam, facere odio. Exercitationem recusandae qui adipisci. Enim doloribus saepe itaque aliquid corrupti nesciunt dignissimos repudiandae iure corporis, quod, voluptatem aspernatur labore.</p>
+    </div>
+
+    <div class="ulitems">
+        <ul id="webUl">
+            <li class="active">ALL PROJECTS</li>
+            <li>UI/UX DESIGN</li>
+            <li> BRANDING </li>
+            <li>WEB DEVELPOMENT</li>
+            <li>PHOTOGRAPHY</li>
+        </ul>
+    </div>
+  
+
+        <div class="images">
+
+         <div class="imgBox">  
+        <img src="/img/imgi_2_1.jpg">
+        <div class="afterHover">
+            <button>painting</button>
+            <button>design</button>
+            </div>
+            </div>
+           <div class="imgBox">  
+        <img src="/img/imgi_3_4.jpg">
+        <div class="afterHover">
+            <button>web app</button>
+            <button>development</button>
+            </div>
+            </div>
+            
+            
+            <div class="imgBox"> 
+        <img src="/img/imgi_4_3.jpg">
+        <div class="afterHover">
+            <button>business</button>
+            <button>marketing</button>
+            </div>
+            </div>
+            
+            <div class="imgBox"> 
+        <img src="/img/imgi_5_5.jpg">
+        <div class="afterHover">
+            <button>portfolio</button>
+            <button>design</button>
+            </div>
+            </div>
+
+            <div class="imgBox"> 
+        <img src="/img/imgi_6_6.jpg">
+        <div class="afterHover">
+            <button>modren</button>
+            <button>web</button>
+            </div>
+            </div>
+          <div class="imgBox">   
+        <img src="/img/imgi_7_7.jpg">
+        <div class="afterHover">
+            <button>agency</button>
+            <button>design</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="core-services">
+        <h1>Core Services.</h1  >
+    <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae consequuntur hic quod ad, totam quas atque neque aperiam quisquam a.</P>
+    
+    </div>
+    <div class="functions">
+        <h4>📑WEB DEVEOPMENT</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, maiores!</p>
+    </div>
+    <div class="main-functions">
+    <div class="functions">
+        <h4>📢DIGITAL MARKETING</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, maiores!</p>
+    </div>
+    <div class="functions">
+        <h4>⬜GRAPHICS GESIGN</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, maiores!</p>
+    </div>
+
+<div class="functions">
+        <h4>⚓BRANDING DESIGN</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, maiores!</p>
+    </div>
+    <div class="functions">
+        <h4>📽️VIDEO MARKETING</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, maiores!</p>
+    </div>
+    <div class="functions">
+        <h4>🤖APP DESIGN</h4>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Hic, maiores!</p>
+    </div>
+<div class="footer">
+    <p>copyright © 2019. Designed &development by<span> Theamfisher</span> distributed.<span>Themewgon.</span></p>
+</div>
+
+
+
+
+
+
+</body>
+</html>

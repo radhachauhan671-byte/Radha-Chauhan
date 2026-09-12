@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+*{
+margin:0px;
+padding:0px;
+}
+nav{
+display: flex;
+background-color: rgb(6, 57, 57);
+color: white;
+justify-content:space-between;
+gap: 20px;
+padding: 30px;
+border-radius: 40px;
+animation :  navbar 2s linear alternate infinite;
+}
+
+ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.logo{
+    color: aqua;
+    font-weight: bold;
+    border-color: azure;
+    border: radius 50px; ;
+}
+
+.logo span{
+    color:rgb(209, 240, 34)
+}
+.button{
+    display: none;
+}
+@media only screen and (max-width: 500px){
+ul{
+    display: none;
+
+    .button{
+        display: block;
+    }
+}
+}
+@keyframes navbar {
+    from {
+        background-color: rgb(41, 43, 43);
+    } 
+    to {
+        background-color: aquamarine;
+    }
+}
+</style>
+
+</head>
+<body>
+    <nav>
+    <div class="logo">R.<span>D</span></div>
+    <ul>
+<li>home</li>
+<li>insert</li>
+<li>details</li>
+<li>contact</li>
+<li>project</li>
+<li>help</li>
+
+    </ul>
+<button>
+     ⇶
+</button>
+       
+    </nav>
+</body>
+</html>

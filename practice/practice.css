@@ -1,0 +1,14 @@
+body{ background-color: aquamarine;  color:pink;}
+h1{
+    background-color: bisque;    color:rgb(224, 82, 26)
+}
+h2{
+    color:rgb(209, 85, 23);
+
+}
+p{
+    color: black;
+}
+p{
+    text-align: left;  text-shadow: 0ch; text-underline-position: above;
+}

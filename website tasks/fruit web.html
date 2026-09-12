@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fruitkha - Fresh Fruits</title>
+
+<style>
+
+
+
+*{
+    margin:0;
+    padding:0;
+    
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:white;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+}
+
+
+
+
+nav{
+    height:70px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 8px white;
+}
+
+.logo{
+    font-size:25px;
+    font-weight:bold;
+    color:#ff7b00;
+}
+
+.logo span{
+    color:#102631;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+    gap:30px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#102631;
+    font-weight:bold;
+}
+
+.hero{
+    height:650px;
+    background:
+    linear-gradient(rgba(0,0,0,.45),rgba(0,0,0,.45)),
+    url("/img/background\ grap.jpeg");
+
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+}
+
+.hero-content{
+    color:white;
+}
+
+.hero-content small{
+    color:#ff7900;
+    letter-spacing:4px;
+    font-weight:bold;
+}
+
+.hero-content h1{
+    font-size:45px;
+    margin:20px 0;
+}
+
+.btn{
+    display:inline-block;
+    padding:13px 25px;
+    border-radius:30px;
+    text-decoration:none;
+    background:#ff7900;
+    color:white;
+    margin:5px;
+}
+
+.btn-outline{
+    background:transparent;
+    border:1px solid #ff7900;
+}
+
+
+
+
+.features{
+    background:#f5f5f5;
+    padding:55px;
+}
+
+.feature-container{
+    display:flex;
+    justify-content:space-around;
+    gap:30px;
+
+}
+
+.feature{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    min-width:200px;
+}
+
+.icon{
+    width:55px;
+    height:55px;
+    border:1px dotted #ff7900;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#ff7900;
+    font-size:22px;
+}
+
+.feature h3{
+    font-size:16px;
+    margin-bottom:5px;
+}
+
+.feature p{
+    color:#777;
+    font-size:13px;
+}
+
+
+.products{
+    padding:90px;
+    text-align:center;
+}
+
+.heading h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.heading h2 span{
+    color:#ff7900;
+}
+
+.heading p{
+    color:#777;
+    max-width:550px;
+    margin:auto;
+    line-height:1.6;
+}
+
+.product-container{
+    margin-top:50px;
+
+    display:flex;
+    flex-wrap: wrap;
+    justify-content:center;
+    gap:25px;
+    
+}
+
+.product-card{
+    width:280px;
+    padding:25px;
+    background:white;
+    box-shadow:0 5px 20px rgba(0,0,0,.10);
+    border-radius:5px;
+}
+
+.product-card img{
+    width:100%;
+    height:190px;
+    object-fit:contain;
+}
+
+.product-card h3{
+    margin:15px 0;
+}
+
+.product-card p{
+    color:#777;
+    font-size:14px;
+}
+
+.price{
+    font-size:25px;
+    font-weight:bold;
+    margin:10px 0 20px;
+}
+
+.cart{
+    background:#ff7900;
+    color:white;
+    border:0;
+    border-radius:25px;
+    padding:12px 20px;
+    cursor:pointer;
+}
+
+
+.deal{
+    background:#f5f5f5;
+    padding:80px 0;
+}
+
+.deal-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:60px;
+    padding: 50px;
+}
+
+
+
+
+
+
+
+
+
+.deal-image {
+  position: relative;
+  
+}
+.deal-image img{
+    width:350px;
+    height: 400px;
+  
+}
+.num1{
+     
+   /* position: absolute;
+   top: 50%;
+   left: 50%; */
+   font-size: 50px;
+   background-color: red;
+   border-radius: 50%;
+   width: 100px;
+   height: 100px;
+  position: absolute;
+  top: 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   z-index: 100;
+   
+}
+
+.button{
+     top: 50%;
+    left:50%;
+    position: absolute;
+    border: solid;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(34, 33, 33);
+    color: white;
+    font-size: 30px;
+    /* border-color: transparent; */
+    
+   
+}
+.button a{
+    color: white;
+    text-decoration: none;
+}
+
+
+.deal-content h2{
+    font-size:35px;
+    margin-bottom:10px;
+}
+
+.deal-content h2 span{
+    color:#ff7900;
+}
+
+.deal-content p{
+    color:#555;
+    line-height:1.6;
+    margin:15px 0;
+}
+
+.timer{
+    display:flex;
+    gap:5px;
+    margin:25px 0;
+}
+
+.time{
+    border:2px solid #ff7900;
+    padding:10px 15px;
+    text-align:center;
+}
+
+.time strong{
+    color:#ff7900;
+    font-size:20px;
+}
+
+
+.testimonial{
+    padding:90px 0;
+    text-align:center;
+}
+
+.profile{
+    width:75px;
+    height:75px;
+    border-radius:50%;
+    object-fit:cover;
+}
+
+.testimonial h3{
+    margin-top:15px;
+}
+
+.testimonial small{
+    color:#888;
+}
+
+.testimonial p{
+    max-width:650px;
+    margin:25px auto;
+    color:#777;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.about{
+    padding:80px 0;
+}
+
+.about-container{
+    display:flex;
+    justify-content:center;
+}
+
+.about-text{
+    max-width:700px;
+}
+
+.about-text small{
+    color:#777;
+}
+
+.about-text h2{
+    font-size:35px;
+    margin:10px 0 20px;
+}
+
+.about-text h2 span{
+    color:#ff7900;
+}
+
+.about-text p{
+    color:#555;
+    line-height:1.7;
+    margin-bottom:15px;
+}
+
+
+.brand-svg1{
+            width: 700px;
+            height: 150px;
+            border: transparent;
+            justify-content: center;
+            text-align: center;
+    
+            
+            
+        }
+
+
+.footer {
+            background: #111;
+            color:#f69338;
+            padding-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            padding-bottom: 70px;
+        }
+
+        .footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .footer h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer p,
+        .footer a {
+            color: #999;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subscribe {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .subscribe input {
+            width: 100%;
+            padding: 13px;
+            background: transparent;
+            border: 1px solid #444;
+            color: white;
+        }
+
+        .subscribe button {
+            width: 50px;
+            border: 0;
+            background: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #292929;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .copyright p {
+            color: #777;
+        }
+
+
+
+
+</style>
+</head>
+
+
+<body>
+
+
+
+
+<nav>
+
+    <div class="logo">
+        Fruit<span>kha</span>
+    </div>
+
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Menu</a></li>
+        <li><a href="#">Events</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+</nav>
+
+
+
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <small>FRESH & ORGANIC</small>
+
+        <h1>Delicious Seasonal Fruits</h1>
+
+        <a href="#products" class="btn">
+            Fruit Collection
+        </a>
+
+        <a href="#contact" class="btn btn-outline">
+            Contact Us
+        </a>
+
+    </div>
+
+</section>
+
+
+
+
+<section class="features">
+
+<div class="container">
+
+<div class="feature-container">
+
+    <div class="feature">
+
+        <div class="icon">
+            🚚
+        </div>
+
+        <div>
+            <h3>Free Shipping</h3>
+            <p>When order over $75</p>
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="icon">
+            😊
+        </div>
+
+        <div>
+            <h3>24/7 Support</h3>
+            <p>Get support all day</p>
+        </div>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="icon">
+            🔃
+        </div>
+
+        <div>
+            <h3>Refund</h3>
+            <p>Get refund within 3 days!</p>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<section class="products" id="products">
+
+<div class="container">
+
+<div class="heading">
+
+    <h2>
+        <span>Our</span> Products
+    </h2>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        Aliquid, fuga quas itaque eveniet beatae optio.
+    </p>
+
+</div>
+
+
+<div class="product-container">
+
+
+    
+
+    <div class="product-card">
+
+        <img src="/img/grapes.jpeg">
+
+        <h3>Strawberry</h3>
+
+        <p>Per Kg</p>
+
+        <div class="price">85$</div>
+
+        <button class="cart">
+             Add to Cart
+        </button>
+
+    </div>
+
+
+    
+
+    <div class="product-card">
+
+        <img src="/img/one grape.jpeg">
+
+        <h3>Berry</h3>
+
+        <p>Per Kg</p>
+
+        <div class="price">70$</div>
+
+        <button class="cart">
+             Add to Cart
+        </button>
+
+    </div>
+
+
+    
+
+    <div class="product-card">
+
+        <img src="/img/lemon.jpeg">
+
+        <h3>Lemon</h3>
+
+        <p>Per Kg</p>
+
+        <div class="price">35$</div>
+
+        <button class="cart">
+            Add to Cart
+        </button>
+
+    </div>
+</div>
+</div>
+
+</section>
+
+<section class="deal">
+
+
+<div class="deal-container">
+
+<div class="deal-image">
+
+        <img src="/img/strawberry.jpeg">
+        
+<div class="container">
+        <div class="num1">30%</div>
+        <div class="button">
+         <a href="https://ganeshdutt.vercel.app">   <b>▶</b></a>
+        </div>
+        </div>
+        
+    </div>
+     <div class="deal-content">
+
+        <h2>
+            <span>Deal</span> of the month
+        </h2>
+
+        <h3>HIKAN STRAWBERRY</h3>
+
+        <p>
+            Quisquam minus maiores repudiandae nobis,
+            minima saepe id, fugit ullam similique!
+            Beatae, minima quisquam molestias facere ea.
+        </p>
+
+
+        <div class="timer">
+
+            <div class="time">
+                <strong>00</strong>
+                <br>
+                Days
+            </div>
+
+            <div class="time">
+                <strong>00</strong>
+                <br>
+                Hours
+            </div>
+
+            <div class="time">
+                <strong>00</strong>
+                <br>
+                Mins
+            </div>
+
+            <div class="time">
+                <strong>00</strong>
+                <br>
+                Secs
+            </div>
+        </div>
+
+
+        <button class="cart">
+             Add to Cart
+        </button>
+
+    </div>
+
+   
+</div>
+
+</section>
+
+
+
+<section class="testimonial">
+
+<div class="container">
+
+    <img src="/img/WhatsApp Image 2026-07-30 at 11.59.57 AM.jpeg" class="profile">
+
+    <h3>RADHA</h3>
+
+    <small>Local shop owner</small>
+
+    <p>
+        " Sed ut perspiciatis unde omnis iste natus error
+        veritatis et quasi architecto beatae vitae dicta sunt.
+        Sed ut perspiciatis unde omnis iste natus error. "
+    </p>
+
+    <h1>❞</h1>
+</div>
+</section>
+
+
+
+<section class="about">
+
+<div class="container">
+
+<div class="about-container">
+
+<div class="about-text">
+
+    <small>Since Year 1999</small>
+
+    <h2>
+        We are <span>Fruitkha</span>
+    </h2>
+
+    <p>
+        Etiam vulputate ut augue vel sodales.
+        In sollicitudin neque et massa porttitor
+        vestibulum a vel nisi.
+    </p>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur
+        adipisicing elit. Sapiente facilis illo
+        repellat veritatis minus.
+    </p>
+
+</div>
+</div>
+</div>
+</section>
+<section class="brand-svg1">
+<div class="brand-svg">
+<div class="company-icons">
+<img src="/Nova - Bootstrap 5 Template/imgi_4_brands.svg">
+
+</div>
+</div>
+</section>
+
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h2>FRUITKHA</h2>
+
+            <p>
+                We create meaningful digital experiences
+                for modern fruit services.
+            </p>
+
+            <div class="social">
+
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">in</a>
+                <a href="#">i</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Company</h3>
+
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Jobs</a>
+            <a href="#">Licenses</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div>
+
+            <h3>Subscribe</h3>
+
+            <p>
+                Subscribe for latest updates.
+            </p>
+
+            <div class="subscribe">
+
+                <input type="email" placeholder="Your Email">
+
+                <button>→</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © 2026 fruitkha. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+
+</body>
+</html>

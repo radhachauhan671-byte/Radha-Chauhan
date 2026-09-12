@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.parent{
+background-color:none;
+width: 700px;
+height: fit-content;
+border: solid;
+border-radius: 50px;
+
+}
+
+.root1{
+    width: 500px;
+    justify-content: center;
+    margin-left: 100px;
+    background-color: aqua;
+    border: solid;
+    border-radius: 50px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 10px;
+}
+.root1 img{
+    width: 450px;
+    height: 300px;
+    border-radius: 50px;
+    border: solid;
+    border-color: none;
+    margin: 20px;
+}
+.root1 h1{
+    margin: 20px;
+    font: bold;
+
+}
+.root1 p{
+    margin: 10px;
+}
+.root1 button{
+    padding: 10px;
+    width: 40%;
+    margin: 20px;
+    background-color: gray;
+    border-radius: 50px;
+    
+}
+.root2{
+    width: 460px;
+    margin-left: 100px ;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    gap: 40px;
+    border: solid;
+    border-color: black;
+    background-color: aqua;
+    border-radius: 50px;
+    
+    padding: 20px;
+
+}
+
+.logo{
+    width: 55px;
+    height: 40px;
+    justify-content: center;
+    text-align: center;
+    padding-top: 15px;
+    border: solid;
+    border-radius: 50px;
+    background-color: brown;
+    border-color: rgb(15, 15, 15);
+    color: white;
+}
+.root3{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.num{
+width: 30px;
+height: 30px;
+font-weight:bold;
+border: solid;
+border-color: black;
+background-color: rgb(43, 179, 179);
+border-radius: 50px;
+text-align: center;
+justify-content: center;
+position: relative;
+position: absolute;
+}
+
+.num1{
+top:20% ;
+left:12%;
+}
+
+.num2{
+    top: 55%;
+    left:35%;
+}
+.num3{
+    right:15%;
+    top: 65%;
+}
+.num4{
+    right: 33%;
+    top: 75%;
+}
+.num5{
+    left: 10%;
+    top:90%;
+}
+.num6{
+    right:15% ;
+    top:95%
+
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+    <div class="parent">
+<div class="num num1">1</div>
+<div class="num num2">2</div>
+<div class="num num3">3</div>
+<div class="num num4">4</div>
+<div class="num num5">5</div>
+<div class="num num6">6</div>
+
+        <div class="root1">
+        <img src="/img/one grape.jpeg">
+            <h1>heading</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio laboriosam asperiores dolorum earum repellat hic.</p>
+            <button>APPLY NOW</button>
+
+
+
+        </div>
+
+        <div class="root2">
+            <div class="logo">RD</div>
+
+            <div class="root3">
+            <h2>heading</h2>
+            <p>subheading</p>
+                </div>
+        </div>
+        
+
+
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infinite Loop</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:#555;
+}
+nav{
+    height:70px;
+    padding:0 8%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:10;
+    background:white;
+}
+.logo{
+    color:#2b8fc9;
+    font-size:24px;
+}
+ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+a{
+    text-decoration:none;
+    color:#555;
+}
+.menu{
+    display:none;
+    font-size:28px;
+}
+.home{
+    height:100vh;
+    background:linear-gradient(#0005,#0005),
+    url("/img/infinite\ background.png") center/cover;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+}
+.home h1{
+    font-size:55px;
+    margin-bottom:20px;
+}
+.home p{
+    font-size:20px;
+}
+section{
+    padding:90px 10%;
+}
+.title{
+    text-align:center;
+    color:#2589c4;
+    font-size:38px;
+    margin-bottom:25px;
+}
+.text{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    line-height:1.8;
+}
+.cards{
+    display:flex;
+    gap:30px;
+    margin-top:50px;
+}
+.card{
+    flex:1;
+    text-align:center;
+    padding:30px;
+}
+.card h2{
+    color:#2589c4;
+    margin:20px 0;
+}
+.blue{
+    background:#168acb;
+    color:white;
+}
+.blue .title{
+    color:white;
+}
+.test{
+    display:flex;
+    gap:30px;
+    margin-top:50px;
+}
+.test div{
+    flex:1;
+    padding:25px;
+    background:#ffffff22;
+    line-height:1.7;
+}
+.gallery{
+    display:flex;
+    gap:15px;
+    margin-top:40px;
+    overflow:hidden;
+}
+.gallery img{
+    width:25%;
+    height:220px;
+    object-fit:cover;
+}
+.contact{
+    max-width:700px;
+    margin:40px auto;
+}
+input,textarea{
+    width:100%;
+    padding:15px;
+    margin:8px 0;
+    border:1px solid #ddd;
+}
+button{
+    padding:14px 35px;
+    background:white;
+    color:gray;
+    border:0;
+    cursor:pointer;
+}
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:30px;
+}
+
+@media(max-width:500px){
+    ul{
+        display:none;
+    }
+    .menu{
+        display:block;
+    }
+    nav{
+        padding:0 20px;
+    }
+    .home h1{
+        font-size:38px;
+    }
+    .cards,.test{
+        flex-direction:column;
+    }
+    .gallery{
+        flex-wrap:wrap;
+    }
+    .gallery img{
+        width:48%;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Infinite Loop</div>
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">What We Do</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="menu">☰</div>
+</nav>
+
+<section class="home" id="home">
+    <div>
+        <h1>Infinite Loop</h1>
+        <p>Bootstrap 4.0 Parallax Theme</p>
+    </div>
+</section>
+
+<section id="about">
+    <h1 class="title">What We Do</h1>
+    <p class="text">
+        This is Infinite Loop, a simple and modern website template.
+        We provide beautiful solutions for your business and projects.
+    </p>
+
+    <div class="cards">
+        <div class="card">
+            <h2>Market Analysis</h2>
+            <p>We study your business and help you grow with better ideas.</p>
+        </div>
+
+        <div class="card">
+            <h2>Fast Support</h2>
+            <p>Our team provides quick and reliable support whenever needed.</p>
+        </div>
+
+        <div class="card">
+            <h2>Top Security</h2>
+            <p>Your information and projects are kept safe and secure.</p>
+        </div>
+    </div>
+</section>
+
+<section class="blue" id="testimonials">
+    <h1 class="title">Testimonials</h1>
+
+    <div class="test">
+        <div>
+            <p>“This website is simple, beautiful and very easy to use.”</p>
+        </div>
+
+        <div>
+            <p>“Great service and amazing experience. Highly recommended.”</p>
+        </div>
+
+        <div>
+            <p>“A modern design with everything we needed.”</p>
+        </div>
+    </div>
+</section>
+
+<section id="gallery">
+    <h1 class="title">Gallery</h1>
+
+    <div class="gallery">
+        <img src="/img/Screenshot 2026-08-12 211427.png">
+        <img src="/img/Screenshot 2026-08-12 211507.png">
+        <img src="/img/Screenshot 2026-08-12 211534.png">
+        <img src="/img/Screenshot 2026-08-12 211611.png">
+    </div>
+</section>
+
+<section class="blue" id="contact">
+    <h1 class="title">Contact Us</h1>
+
+    <div class="contact">
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea rows="6" placeholder="Message"></textarea>
+        <button>Send</button>
+        <br><br>
+        <p>💬 chat online</p><br>
+        <p>✉️ mail us on mail@google.com</p><br>
+        <p>📍location</p><br>
+        <p>📞 contact us</p><br>
+    </div>
+</section>
+
+<footer>
+    <p>Copyright © 2026 Infinite Loop</p>
+</footer>
+
+</body>
+</html>

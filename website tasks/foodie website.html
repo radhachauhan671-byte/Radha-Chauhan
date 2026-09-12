@@ -1,0 +1,574 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Website</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+.hero{
+    height: 600px;
+    background-image: url(/foodiee\ background.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+
+    
+
+}
+.hero h1{
+    text-align:justify;
+    font-size: 120px;
+    font-style: italic;
+}
+.hero p{
+    font-size: 30px;
+}
+nav{
+    height: 80px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+
+position: sticky;
+top: 0;
+z-index: 1000;
+
+}
+nav a{text-decoration: none;
+color: black;
+font-size:18px;
+
+}
+
+
+body{
+    background-color: transparent;
+}
+
+nav{
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    width:100%;
+    height:80px;
+    background:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:0 1px 8px rgba(255, 254, 254, 0.973);
+}
+
+.nav-container{
+    width:90%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.menu{
+    display:flex;
+    gap:35px;
+    list-style:none;
+}
+
+.menu li a{
+    text-decoration:none;
+    color:#222;
+    font-size:18px;
+}
+
+.menu li a.active{
+    color:#d58b5f;
+}
+
+.logo{
+    font-size:42px;
+    font-weight:bold;
+    font-style:italic;
+    color:#000;
+}
+
+.food{
+    /* width:100%; */
+    display:flex;
+   
+}
+
+.left img{
+    width: 400px;
+}
+
+
+
+ button{
+    padding: 10px;
+    font-weight: bold;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: solid;
+    border-color: #c46b36;
+    justify-content: center;
+    margin-left: 50%;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+
+.content{
+    max-width:200px;
+}
+
+.content h2{
+    font-size:40px;
+    font-style:italic;
+    text-align:center;
+    margin-bottom:50px;
+
+}
+
+.line{
+    width:50px;
+    height:3px;
+    background:#c46b36;
+    margin:0 auto 30px auto;
+}
+
+.content p{
+    font-size:22px;
+    line-height:1.8;
+    text-align:left;
+    color:#cfcfcf;
+}
+.heading{
+    backdrop-filter: blur(20px);
+    padding: 30px;
+    text-shadow: 12px 2px 2px orange;
+}
+.review{
+    width: 100%;
+    height: 300px;
+
+}
+.review p{
+    background-color: white;
+    color: gray;
+    justify-content: center;
+    align-items: center;
+    margin: top 20px;
+}
+.menu1{
+    background-image: url(/background.jpeg);
+    color: gray;
+    padding: 100px;
+
+}
+.featured-dished{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+.platelogo{
+font-size: 50px;
+}
+
+.main-menu{
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-color: white;
+}
+.menu-item1 img{
+    width: 750px;
+    height: 150px;
+}
+.menu-item1{
+    display: flex;
+    flex-direction: row;
+    background-color: #d58b5f;
+    color: #cfcfcf;
+    color: white;
+    gap: 20px;
+    
+
+}
+.menu-item2 img{
+    width: 150px;
+    height: 150px;
+}
+
+.menu-item2{
+    display: flex;
+    flex-direction: row;
+    background-color:whitesmoke;
+    color:gray;
+
+}
+
+
+.menu-item3 img{
+    width: 150px;
+    height: 150px;
+}
+.menu-item3{
+    display: flex;
+    flex-direction: row;
+    background-color: #d58b5f;
+    color: #cfcfcf;
+    color: white;
+}
+
+.menu-item4 img{
+    width: 150px;
+    height: 150px;
+}
+
+.menu-item4{
+    display: flex;
+    flex-direction: row;
+    background-color:whitesmoke;
+    color:gray;
+
+}
+.menu-item5 img{
+    width: 150px;
+    height: 150px;
+}
+.menu-item5{
+    display: flex;
+    flex-direction: row;
+    background-color: #d58b5f;
+    color: #cfcfcf;
+    color: white;
+}
+
+.menu-item6 img{
+    width: 150px;
+    height: 150px;
+}
+
+.menu-item6{
+    display: flex;
+    flex-direction: row;
+    background-color:whitesmoke;
+    color:gray;
+
+}
+.footer {
+            background: #111;
+            color: white;
+            padding-top: 80px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+            gap: 50px;
+            padding-bottom: 70px;
+        }
+
+        .footer h2 {
+            letter-spacing: 4px;
+            margin-bottom: 20px;
+        }
+
+        .footer h3 {
+            margin-bottom: 15px;
+        }
+
+        .footer p,
+        .footer a {
+            color: #999;
+            font-size: 14px;
+            line-height: 2;
+        }
+
+        .footer-column {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social a {
+            width: 35px;
+            height: 35px;
+            border: 1px solid #444;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .subscribe {
+            display: flex;
+            margin-top: 15px;
+        }
+
+        .subscribe input {
+            width: 100%;
+            padding: 13px;
+            background: transparent;
+            border: 1px solid #444;
+            color: white;
+        }
+
+        .subscribe button {
+            width: 50px;
+            border: 0;
+            background: white;
+        }
+
+        .copyright {
+            border-top: 1px solid #292929;
+            text-align: center;
+            padding: 25px;
+        }
+
+        .copyright p {
+            color: #777;
+        }
+
+        .portfolio-box img {
+                height: 300px;
+            }
+
+            .skills-image img,
+            .about-image img {
+                height: 350px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-dishes{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+            }
+            .menu-text{
+                text-align: center;
+                width: 600px;
+            }
+            .image-123 img{
+                width: 200px;
+                height: auto;
+
+            }
+        
+
+</style>
+</head>
+<body>
+<section class="hero">
+        <h1 class="heading">foodee</h1>
+        <p>lovely design by RADHA</p>
+    </section>
+
+<nav>
+    <div class="nav-container">
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">About</a></li>
+            <li><a href="#">Features</a></li>
+        </ul>
+
+        <div class="logo">foodee</div>
+
+        <ul class="menu">
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Reservation</a></li>
+        </ul>
+    </div>
+</nav>
+
+<section class="food">
+    <div class="left">
+        <img src="/img/foodie.png">
+    </div>
+
+
+
+    <div class="right">
+        
+            <h2>About Us</h2>
+            <div class="line"></div>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate dolores facere, mollitia ea sed eius laborum maiores unde dignissimos nam quos odit tempore deleniti incidunt explicabo enim rem! Rerum vitae harum praesentium 
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, nisi!
+              <br>
+              <button>get in touch</button>
+
+            </p>
+        
+    </div>
+</section>
+
+<div class="review">
+<p>"Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis porro amet cupiditate quaerat esse cumque eos? Dolor consequuntur vitae incidunt."
+    <br>— RADHA
+</p>
+</div>
+
+
+<section class="menu1">
+    <div class="featured-dishes">    
+    <div class="platelogo">  
+🍽️  </div>
+<h1>Featured Dishes</h1>
+<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, molestiae.</p>
+</div>
+<div class="main-menu">
+<div class="menu-item1">
+    <div class="image-123">
+        <img src="/pasta.jpeg">
+    </div>
+ <div class="menu-text">
+       <h4>title</h4>
+    
+    <h3>$7.50</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem incidunt dicta omnis inventore possimus quidem fuga quisquam? Aperiam, quaerat.</p>
+ </div>
+</div>
+<div class="menu-item2" >
+    <img src="/pasta.jpeg">
+    <h4>title</h4>
+
+    <h3>$7.50</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem incidunt dicta omnis inventore possimus quidem fuga quisquam? Aperiam, quaerat.</p>
+</div>
+
+<div class="menu-item3">
+    <img src="/pasta.jpeg">
+    <h4>title</h4>
+    
+    <h3>$7.50</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem incidunt dicta omnis inventore possimus quidem fuga quisquam? Aperiam, quaerat.</p>
+</div>
+
+<div class="menu-item4"> 
+    <img src="/pasta.jpeg"alt="img">
+    <h4>title</h4>
+    <hr>
+    <h3>$7.50</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem incidunt dicta omnis inventore possimus quidem fuga quisquam? Aperiam, quaerat.</p>
+</div>
+
+<div class="menu-item5">
+    <img src="/pasta.jpeg">
+    <h4>title</h4>
+    
+    <h3>$7.50</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem incidunt dicta omnis inventore possimus quidem fuga quisquam? Aperiam, quaerat.</p>
+</div>
+
+<div class="menu-item6">
+    <img src="/pasta.jpeg">
+    <h4>title</h4>
+    
+    <h3>$7.50</h3>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit, exercitationem incidunt dicta omnis inventore possimus quidem fuga quisquam? Aperiam, quaerat.</p>
+</div> 
+
+</div>   
+</section>
+<footer class="footer">
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h2>FOODIEE</h2>
+
+            <p>
+                We create meaningful digital experiences
+                for modern businesses.
+            </p>
+
+            <div class="social">
+
+                <a href="#">f</a>
+                <a href="#">t</a>
+                <a href="#">in</a>
+                <a href="#">i</a>
+
+            </div>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>Resturent</h3>
+
+            <a href="#">About Us</a>
+            <a href="#">table booking</a>
+            <a href="#">reservation</a>
+            <a href="#">Fasai Licenses</a>
+
+        </div>
+
+        <div class="footer-column">
+
+            <h3>About US</h3>
+
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+            <a href="#">Security</a>
+            <a href="#">Contact</a>
+
+        </div>
+
+        <div>
+
+            <h3>Subscribe</h3>
+
+            <p>
+                Subscribe for latest info.
+            </p>
+
+            <div class="subscribe">
+
+                <input type="email" placeholder="Your Email">
+
+                <button>→</button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="copyright">
+
+        <p>
+            © 2026 foodiee. All Rights Reserved.
+        </p>
+
+    </div>
+
+</footer>
+
+
+
+</body>
+</html>

@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.0/css/all.min.css" integrity="sha512-ApSLB1Pd3/bZN8fWB/RG9YhN/7bd9Hkf3AGaE2mPfebjrxagjuBtx2GcgdqIlJkUzwylBo61r9Xa9NmgBI0swA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family:Arial, sans-serif;
+    background-color:transparent;
+}
+
+nav{
+display: flex;
+width: 100%;
+background-color: bisque;
+gap: 20px;
+padding: 20px;
+}
+.logo{
+cursor: pointer;
+border: none;
+width: 90px;
+height: 50px;
+border-radius: 20px;
+padding-left: 10px;
+background-color:rgb(54, 55, 36);
+color: white;
+}
+
+ul{
+display: flex;
+gap: 30px;
+list-style: none;
+cursor:pointer;
+}
+
+.hero{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 80px 100px;
+    background-color: #f7f4ef;
+
+}
+.hero-text{
+    width: 50%;
+}
+.hero-text h4{
+    color: orange;
+    font-size: 22px;
+}
+.hero-texth1{
+    font-size:55px;
+    margin: 20px 0;
+}
+hero-text p{
+    font-size: 18px;
+    color: gray;
+    line-height: 28px;
+    margin-bottom: 25px;
+
+}
+.hero-text button{
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 15px 35px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.box{
+    color: transparent;
+    width: 2000px;       
+    display: flex;
+}
+
+.box img{
+    width: 500px;
+    height: 350px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.collection-text{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    color: black;
+}
+.collection-img{
+
+    display: flex;
+    gap: 50px;
+    padding: 80px;
+   text-align: center;
+
+    
+}
+.collection-img div img{
+
+   width: 300px;
+   height: 300px;
+    
+}
+.footer{
+    justify-content: center;
+    font-size: 18px;
+    font-style: italic;
+    background-image: url(/SOFA4.png);
+    background-size: cover;
+    background-position:center;
+    text-align: center;
+    padding: 50px;
+    margin: 80px;
+}
+.footer-info {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.bottom-button{
+text-align: center;
+
+}
+.bottom-button input{
+    padding: 15px 0;
+}
+
+
+
+
+.footer2{
+    margin: 20px;
+    background:#1d1b18;
+    color:white;
+    padding:50px 80px;
+}
+
+.top-menu{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:60px;
+}
+
+.logo1 h4{
+    font-size:14px;
+    letter-spacing:2px;
+}
+
+.top-menu ul{
+    display:flex;
+    gap:30px;
+    list-style:none;
+}
+
+
+.footer-content{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.left1 h1{
+    font-size:60px;
+    font-weight:300;
+    line-height:70px;
+    margin-bottom:50px;
+}
+
+.email p{
+    color:#999;
+    margin-bottom:10px;
+}
+
+.email h2{
+    color:#ddd;
+    font-weight:300;
+}
+
+.social-icons{
+    display:flex;
+    gap:15px;
+    margin-bottom:40px;
+}
+
+.social-icons a{
+    width:45px;
+    height:45px;
+    border:1px solid white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:white;
+    text-decoration:none;
+}
+
+button{
+    background:transparent;
+    color:white;
+    border:1px solid white;
+    padding:15px 35px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+hr{
+    margin:50px 0 20px;
+    border:1px solid #444;
+}
+
+.bottom2{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.links{
+    display:flex;
+    gap:25px;
+}
+
+.links a{
+    color:#bfbfbf;
+    text-decoration:none;
+}
+
+.bottom2 p{
+    color:#999;
+}
+    </style>
+</head>
+<body>
+    
+     <nav>
+
+    <div class="logo"> FURNISH TEMPLATE</div>
+    <ul>
+<li>+91 12345678900</li>
+<li>home</li>
+<li>About Us</li>
+<li>Products</li>
+<li>Testimonial</li>
+<li>contacts</li>
+
+</ul>
+</nav>
+
+<section class="hero">
+<div class="hero-text">
+    <h4>25% OFF</h4>
+    <h1>crafted royal comfort sofa</h1>
+    <p>discover premium furniture design for morden living.
+        comfort,style and quality in one place
+    </p>
+    <button>SHOP NOW</button>
+
+</div>
+<div class="slider">
+<div class="box">   <!--i want to use auto-scroll not box slider-->
+<img src="/img/YELLOW SOFA.png" alt="sofa">
+</div>
+</div>
+</div>
+</section>
+
+<section class="collection">
+    <div class="collection-text">
+<h1>our favoiurte collection</h1>
+<p>we are inspired by the realities of the life today, in which traditional devices between personal and professional space are more fluid.</p>
+</div></section>
+
+<section class="collection1">
+<div class="collection-img">      <!--i want the data at the footer of the img not at the side-->
+    <div>
+        <img src="/img/lamp.png">
+    <p>lamp<br><span><del>$59.00</del></span>$29.00<span></span></p>
+    </div>
+    <div>
+        <img src="/img/morden chair.png">
+    <p>mordern chair<br><span><del>$95.00</del></span>$89.00<span></span></p>
+    </div>
+   <div>
+     <img src="/img/boss chair.png"><p>boss chair<br><span><del>$79.00</del></span>$69.00<span></span></p>
+   </div>
+    </div>
+
+</section>
+
+<hr>
+
+
+<section class="footer">
+<div class="footer-info">
+<p>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore soluta ipsam fugit. Nihil unde eos facere dolorum autem possimus rem, consectetur deserunt molestias? Unde eos iusto rerum. Molestiae, officia sed voluptate maiores iusto nulla quia in labore laboriosam rerum quasi sit qui. Consequuntur sed illum, quam officia sint aspernatur quae?</p>
+<h4>jhone deo</h4>
+<p>CEO,company name</p>
+
+</div>
+</section>
+
+<section class="bottom">
+<div class="bottom-button">
+
+<h1>subscribe to our Nwesletter</h1>      
+
+<!--i want  this as a heading and input&button as flex ,why my all website in a box slider-->
+
+
+<input type="email" placeholder="enter you email">
+<button style="background-color: #1d1b18;">submit</button>
+</div>
+</section>
+
+<footer class="footer2">
+<div class="top-menu">
+<div class="logo1">
+<h4>furnish<br>template</h4>
+</div>
+<ul>
+    <li>home</li>
+    <li>services</li>
+    <li>product</li>
+    <li>About us</li>
+    <li>contacts</li>
+</ul>
+</div>
+<div class="footer-content">
+<div class="left1">
+<h1>we design<br>all over <br>the world</h1>
+<div class="email">
+    <p>E-mail id</p>
+    <h2>info@example.com</h2>
+</div>
+</div>
+<div class="right1">
+    <div class="social-icons">  <!-- i want to add icons in every box -->
+        <a href="#">
+        <i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://ganeshdutt.vercel.app/">
+        <i class="fa-brands fa-instagram"></i></a>
+        <a href="#">
+        <i class="fa-brands fa-twitter"></i></a>
+        <a href="#">
+        <i class="fa-brands fa-linkedin"></i></a>
+        
+    </div>
+    <button>conat us</button>
+</div>
+</div>
+<hr>
+<div class="bottom2">
+    <p>2025 furnish. All rights reserved.</p>
+    <div class="links">
+    <a href="#">privacy policy</a>
+    <a href="#">terms & service</a>
+
+    </div>
+</div>
+
+</footer>
+</body>
+</html>

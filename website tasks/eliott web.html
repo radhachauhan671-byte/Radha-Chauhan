@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #fff;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* Navbar */
+
+        header {
+            padding: 25px 0;
+            border-bottom: 1px solid #eee;
+            background: white;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #111;
+            text-decoration: none;
+        }
+
+        ul {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        li {
+            display: flex;
+            text-decoration: none;
+            color: #333;
+            font-size: 15px;
+        
+        }
+
+        button{
+            display: flex;
+            flex-direction: row;
+            gap: 30px;
+            border: solid;
+            background: #111;
+            color: white;
+            padding: 12px 22px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-left: 20px;
+        }
+
+        /* Hero */
+
+        .hero {
+            padding: 100px 0;
+            background: #f7f7f7;
+        }
+
+        .hero-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 60px;
+        }
+
+        .hero-text {
+            width: 55%;
+        }
+
+        .hero-text small {
+            letter-spacing: 3px;
+            color: #777;
+        }
+
+        .hero-text h1 {
+            font-size: 70px;
+            line-height: 1.1;
+            margin: 15px 0;
+        }
+
+        .hero-text h2 {
+            font-size: 28px;
+            font-weight: normal;
+            margin-bottom: 20px;
+        }
+
+        .hero-text p {
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .buttons {
+            display: flex;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 25px;
+            text-decoration: none;
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        .button {
+            background: #111;
+            color: white;
+            height: 50px;
+            width: 80px;
+        }
+
+        .white-btn {
+            border: 1px solid #111;
+            color: #111;
+        }
+
+        .hero-image {
+            width: 40%;
+        }
+
+        .hero-image img {
+            width: 100%;
+            display: block;
+        }
+
+        /* Common Section */
+
+        .section {
+            padding: 90px 0;
+        }
+
+        .title {
+            text-align: center;
+            margin-bottom: 55px;
+        }
+
+        .title p {
+            color: #777;
+            letter-spacing: 3px;
+            font-size: 13px;
+        }
+
+        .title h2 {
+            font-size: 40px;
+            margin-top: 10px;
+        }
+
+        /* About */
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 70px;
+        }
+
+        .about-image {
+            width: 45%;
+        }
+
+        .about-image img {
+            width: 100%;
+            display: block;
+        }
+
+        .about-text {
+            width: 55%;
+        }
+
+        .about-text h3 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        /* Services */
+
+        .services {
+            background: #f7f7f7;
+        }
+
+        .services-content {
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+        }
+
+        .service {
+            width: 33.33%;
+            background: white;
+            padding: 40px 30px;
+            border: 1px solid #eee;
+        }
+
+        .service span {
+            color: #888;
+        }
+
+        .service h3 {
+            font-size: 23px;
+            margin: 20px 0 15px;
+        }
+
+        .service p {
+            color: #666;
+            line-height: 1.7;
+        }
+
+        /* Portfolio */
+
+        .portfolio-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .project {
+            width: calc(33.33% - 17px);
+            border: 1px solid #eee;
+        }
+
+        .project img {
+            width: 100%;
+            display: block;
+        }
+
+        .project-text {
+            padding: 20px;
+        }
+
+        .project-text p {
+            color: #777;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .project-text h3 {
+            font-size: 21px;
+            margin-top: 7px;
+        }
+
+        /* Skills */
+
+        .skills {
+            background: #f7f7f7;
+        }
+
+        .skills-content {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .skill {
+            margin-bottom: 25px;
+        }
+
+        .skill-name {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .bar {
+            width: 100%;
+            height: 8px;
+            background: #ddd;
+        }
+
+        .bar span {
+            display: block;
+            height: 100%;
+            background: #111;
+        }
+
+        /* Contact */
+
+        .contact-content {
+            display: flex;
+            gap: 70px;
+        }
+
+        .contact-info {
+            width: 40%;
+        }
+
+        .contact-info h3 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            color: #666;
+            line-height: 1.8;
+            margin-bottom: 15px;
+        }
+
+        form {
+            width: 60%;
+        }
+
+        input textarea {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            outline: none;
+            font-family: Arial, sans-serif;
+        }
+
+        textarea {
+            height: 150px;
+            resize: none;
+        }
+
+        button {
+            border: none;
+            cursor: pointer;
+            font-size: 13px;
+        }
+
+        /* Footer */
+
+        footer {
+            background: #111;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+        }
+
+        /* Responsive */
+
+        @media (min-width: 500px) {
+            .ul{
+            display: flex;
+            }
+            .button{
+                display: none;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+
+            .about-content {
+                flex-direction: column;
+            }
+
+            .about-image,
+            .about-text {
+                width: 100%;
+            }
+
+            .services-content {
+                display: flex;
+                flex-direction: column;
+            }
+
+            .service {
+                width: 100%;
+            }
+
+            .project {
+                width: 100%;
+            }
+
+            .contact-content {
+                flex-direction: column;
+            }
+
+            .contact-info,
+            form {
+                width: 100%;
+            }
+
+            .section {
+                padding: 60px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav">
+            <a href="#" class="logo">Folio.</a>
+
+            <nav>
+                <ul>
+                <li>Home</li>
+                <li>About</li>
+                <li>Services</li>
+                <li>Portfolio</li>
+                <li>Contact</li>
+                </ul>
+            </nav>
+
+            <button>Ξ</button>
+        </div>
+    </header>
+
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+
+            <div class="hero-text">
+                <small>HELLO, I'M</small>
+
+                <h1>Your Name</h1>
+
+                <h2>Web Developer & Designer</h2>
+
+                <p>
+                    I create modern, responsive and beautiful websites
+                    that help businesses grow and stand out online.
+                </p>
+
+                <div class="buttons">
+                    <button>
+                        View My Work
+                    </button>
+
+                    <button>
+                        Contact Me
+                    </button>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=700&q=80">
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section" id="about">
+        <div class="container">
+
+            <div class="title">
+                <p>ABOUT ME</p>
+                <h2>Know About Me</h2>
+            </div>
+
+            <div class="about-content">
+
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80">
+                </div>
+
+                <div class="about-text">
+                    <h3>I am a creative Web Developer</h3>
+
+                    <p>
+                        I design and develop clean, modern and responsive
+                        websites with a great user experience.
+                    </p>
+
+                    <p>
+                        My goal is to create websites that look professional,
+                        work perfectly and are easy to use.
+                    </p>
+
+                    <a href="#" class="btn black-btn">Download CV</a>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section services" id="services">
+        <div class="container">
+
+            <div class="title">
+                <p>MY SERVICES</p>
+                <h2>What I Do</h2>
+            </div>
+
+            <div class="services-content">
+
+                <div class="service">
+                    <span>01</span>
+                    <h3>Web Design</h3>
+                    <p>
+                        Modern and attractive website designs
+                        for your business.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <span>02</span>
+                    <h3>Web Development</h3>
+                    <p>
+                        Responsive and fast websites using
+                        modern technologies.
+                    </p>
+                </div>
+
+                <div class="service">
+                    <span>03</span>
+                    <h3>UI/UX Design</h3>
+                    <p>
+                        Simple and user-friendly interfaces
+                        for better experiences.
+                    </p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section" id="portfolio">
+        <div class="container">
+
+            <div class="title">
+                <p>MY WORK</p>
+                <h2>Recent Projects</h2>
+            </div>
+
+            <div class="portfolio-content">
+
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80">
+
+                    <div class="project-text">
+                        <p>WEB DESIGN</p>
+                        <h3>Business Website</h3>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1558655146-d09347e92766?auto=format&fit=crop&w=800&q=80">
+
+                    <div class="project-text">
+                        <p>UI DESIGN</p>
+                        <h3>Creative Landing Page</h3>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d?auto=format&fit=crop&w=800&q=80">
+
+                    <div class="project-text">
+                        <p>DEVELOPMENT</p>
+                        <h3>Portfolio Website</h3>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section skills">
+        <div class="container">
+
+            <div class="title">
+                <p>MY SKILLS</p>
+                <h2>What I Know</h2>
+            </div>
+
+            <div class="skills-content">
+
+                <div class="skill">
+                    <div class="skill-name">
+                        <span>HTML</span>
+                        <span>95%</span>
+                    </div>
+
+                    <div class="bar">
+                        <span style="width:95%"></span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">
+                        <span>CSS</span>
+                        <span>90%</span>
+                    </div>
+
+                    <div class="bar">
+                        <span style="width:90%"></span>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="skill-name">
+                        <span>JavaScript</span>
+                        <span>75%</span>
+                    </div>
+
+                    <div class="bar">
+                        <span style="width:75%"></span>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="section" id="contact">
+        <div class="container">
+
+            <div class="title">
+                <p>CONTACT ME</p>
+                <h2>Let's Work Together</h2>
+            </div>
+
+            <div class="contact-content">
+
+                <div class="contact-info">
+                    <h3>Have a project in mind?</h3>
+
+                    <p>
+                        Feel free to contact me. I would love to
+                        discuss your next project.
+                    </p>
+
+                    <p>
+                        Email: example@gmail.com
+                    </p>
+
+                    <p>
+                        Phone: +91 9876543210
+                    </p>
+                </div>
+
+                <form>
+
+                    <input type="text" placeholder="Your Name">
+
+                    <input type="email" placeholder="Your Email">
+
+                    <input type="text" placeholder="Subject">
+
+                    <textarea placeholder="Your Message"></textarea>
+
+                    <button class="btn black-btn">
+                        Send Message
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+    </section>
+
+
+    <footer>
+        <p>© 2026 Folio. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>

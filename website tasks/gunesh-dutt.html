@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ganesh Dutt | Web Developer</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #071a38;
+            color: white;
+        }
+
+        /* NAVBAR  */
+
+        .navbar {
+            width: 100%;
+            height: 80px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 0 7%;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        .logo span:first-child {
+            color: #5da9ff;
+        }
+
+        .logo span:last-child {
+            color: white;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #ddd;
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .nav-links a:first-child {
+            color: #5da9ff;
+            border-bottom: 2px solid #5da9ff;
+            padding-bottom: 7px;
+        }
+
+        .hire-btn {
+            background: #5b9ff1;
+            color: white;
+            border: none;
+
+            padding: 13px 25px;
+            border-radius: 25px;
+
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+
+        /* HERO */
+
+        .hero {
+            min-height: calc(100vh - 80px);
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            padding: 20px 7% 50px;
+
+            overflow: hidden;
+        }
+
+
+        /*LEFT SIDE */
+
+        .hero-left {
+            width: 50%;
+            position: relative;
+            z-index: 5;
+        }
+
+        .hello {
+            color: #8bc1ff;
+            font-size: 25px;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .name {
+            font-size: 72px;
+            line-height: 0.98;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .name .white {
+            color: white;
+        }
+
+        .name .gray {
+            color: #8292a9;
+        }
+
+        .typing {
+            margin-top: 25px;
+
+            font-size: 30px;
+            font-weight: 700;
+        }
+
+        .typing span {
+            color: #6aaeff;
+        }
+
+        .description {
+            max-width: 600px;
+
+            margin-top: 28px;
+
+            font-size: 17px;
+            line-height: 1.55;
+
+            color: #e0e5ec;
+            font-weight: 500;
+        }
+
+
+        /* CONTACT*/
+
+        .bottom-row {
+            margin-top: 35px;
+
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .email {
+            height: 52px;
+
+            padding: 0 22px;
+
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            border-radius: 30px;
+
+            background: rgba(255,255,255,0.10);
+            border: 1px solid rgba(255,255,255,0.08);
+
+            color: white;
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .email-icon {
+            width: 30px;
+            height: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background: #5da9ff;
+            border-radius: 50%;
+        }
+
+        .social {
+            width: 50px;
+            height: 50px;
+
+            border-radius: 50px;
+
+            background: rgba(255,255,255,0.13);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+
+        /*  RIGHT SIDE */
+
+        .hero-right {
+            width: 50%;
+            min-height: 600px;
+
+            position: relative;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+
+        /* BIG CIRCLE */
+
+        .circle {
+            position: absolute;
+
+            width: 500px;
+            height: 500px;
+
+            border-radius: 50%;
+
+            border: 1px solid rgba(255,255,255,0.10);
+
+            background: rgba(255,255,255,0.02);
+        }
+
+
+        /* PERSON IMAGE */
+
+        img {
+            position: relative;
+            z-index:1000;
+
+            width: 390px;
+            height: 390px;
+
+            object-fit: contain;
+            object-position: center bottom;
+        }
+
+
+        /*  FLOATING BOXES  */
+
+        .info-box {
+            position: absolute;
+            z-index: 1;
+
+            padding: 18px 25px;
+
+            min-width: 170px;
+
+            border-radius: 15px;
+
+            background: rgba(31, 48, 75, 0.85);
+
+            border: 1px solid rgba(255,255,255,0.12);
+
+            backdrop-filter: blur(8px);
+        }
+
+        .backend {
+            top: 80px;
+            right: 0;
+        }
+
+        .responsive {
+            left: 0;
+            bottom: 130px;
+        }
+
+        .box-title {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .box-text {
+            font-size: 12px;
+            color: #bfc9d8;
+            line-height: 1.4;
+        }
+
+        .box-icon {
+            width: 35px;
+            height: 35px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            float: left;
+
+            margin-right: 12px;
+
+            border-radius: 7px;
+
+            background: #7165d9;
+        }
+
+        .responsive .box-icon {
+            background: #65d678;
+        }
+
+
+
+
+        /* RESPONSIVE */
+
+        @media (min-width: 500px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .nav-links {
+                gap: 15px;
+            }
+
+            .hero {
+                padding: 30px 5%;
+            }
+
+            .name {
+                font-size: 55px;
+            }
+
+            .hero-right {
+                min-height: 500px;
+
+            .person {
+                width: 320px;
+                height: 450px;
+            }
+            .navbar {
+                height: auto;
+                padding-top: 20px;
+                padding-bottom: 20px;
+
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                width: 100%;
+                margin-top: 20px;
+
+                justify-content: center;
+            }
+            .hero {
+                flex-direction: column;
+
+                text-align: center;
+            }
+
+            .hero-left {
+                width: 100%;
+            }
+        }
+        }
+
+    
+    </style>
+</head>
+
+
+<body>
+
+    
+
+    <header class="navbar">
+
+        <div class="logo">
+            <span>&lt;/&gt;</span>
+            <span> GANESH DUTT.</span>
+        </div>
+
+        <nav class="nav-links">
+
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+
+            <button class="hire-btn">
+                Hire Me
+            </button>
+
+        </nav>
+
+    </header>
+
+
+
+    <section class="hero">
+
+
+
+
+        <div class="hero-left">
+
+            <p class="hello">
+                Hello, I'm
+            </p>
+
+            <h1 class="name">
+                <span class="white">GANESH</span><br>
+                <span class="gray">DUTT</span>
+            </h1>
+
+            <h2 class="typing">
+                I'm a <span>Full Stack Developer</span>
+            </h2>
+
+            <p class="description">
+                Full Stack MERN Developer & Trainer with a passion for
+                building beautiful, functional, and scalable web applications.
+                I turn complex logic into smooth digital experiences.
+            </p>
+
+
+            <div class="bottom-row">
+
+                <div class="email">
+
+                    <div class="email-icon">
+                        ✉️
+                    </div>
+
+                    webgyaan.hub@gmail.com
+
+                </div>
+
+
+                <div class="social">
+                    Git
+                </div>
+
+                <div class="social">
+                    in
+                </div>
+
+                <div class="social">
+                    ◎
+                </div>
+
+                <div class="social">
+                    📞
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RIGHT -->
+
+        <div class="hero-right">
+
+            <div class="circle"></div>
+
+
+
+            <img src="/Danesh Dutt.png">
+
+
+            
+            <div class="info-box backend">
+
+                <div class="box-icon">
+                    ▤
+                </div>
+
+                <div class="box-title">
+                    Robust Backend
+                </div>
+
+                <div class="box-text">
+                    Node.js &<br>
+                    Express APIs
+                </div>
+
+            </div>
+
+
+    
+
+            <div class="info-box responsive">
+
+                <div class="box-icon">
+                    📱
+                </div>
+
+                <div class="box-title">
+                    Responsive
+                </div>
+
+                <div class="box-text">
+                    Mobile First
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+</body>
+</html>
