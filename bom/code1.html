@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="myButton">Click Me</button>
+
+    <script>
+        let okCount = 0;
+let cancelCount = 0;
+
+document.querySelector("#myButton").addEventListener("click", () => {
+  const result = confirm("Hello guys");
+
+  if (result) {
+    okCount++;
+    alert(`OK pressed: ${okCount} times`);
+  } else {
+    cancelCount++;
+    alert(`Cancel pressed: ${cancelCount} times`);
+  }
+
+  console.log("OK:", okCount, "Cancel:", cancelCount);
+});
+    </script>
+</body>
+</html>

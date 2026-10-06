@@ -1,0 +1,32 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Delay Page</title>
+
+  <style>
+    #content {
+      display: none;
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <p id="loading">Loading...</p>
+
+  <div id="content">
+    <h1>Welcome!</h1>
+    <p>to my blank page 😂.</p>
+  </div>
+
+  <script>
+    setTimeout(function () {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 3000);
+  </script>
+</body>
+</html>

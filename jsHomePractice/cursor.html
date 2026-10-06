@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+body{
+    font-size: 45px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+    background-color: rgb(15, 15, 32);
+    color: white;
+}
+#text{
+    color: rgb(80, 18, 128);
+}
+
+#cursor{
+    animation: blink 0.7s infinite;
+}
+@keyframes blink {
+    50%{
+        opacity: 0;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <div>I am <span id="text">Hello</span>
+    <span id="cursor">|</span></div>
+
+    <script>
+ const word = ["radha dagar","a developer"];
+ let wordIndex = 0;
+ let charIndex = 0;
+ let isDeleting = false;
+ 
+
+ const element = document.querySelector("#text");
+ function runningText(){
+    const currentWord = word[wordIndex];
+    element.innerText = currentWord.slice(0, charIndex);
+    
+    if(isDeleting === false){
+        charIndex++;
+    }else{
+        charIndex--;
+    }
+    if(charIndex == currentWord.length){
+        isDeleting = true;
+        setTimeout(runningText,1000);
+
+        return;
+    }
+    if(charIndex == 0){
+        isDeleting = false;
+        wordIndex++;
+        if(wordIndex == word.length){
+            wordIndex = 0;
+        }
+    }
+let speed = 100;
+if(isDeleting == true){
+    speed = 50;
+}
+ setTimeout(runningText,speed);
+
+ }
+runningText()
+
+
+    </script>
+</body>
+</html>

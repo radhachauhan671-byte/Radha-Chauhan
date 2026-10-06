@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+<h1>Lorem ipsum dolor sit amet.</h1>
+<!-- <button id="btn">click me</button> -->
+
+    <p>Time</p>
+    <button id="print">print</button>
+    <button id="open">open</button>
+    <button id="close">close</button>
+    <button id="change">change</button>
+    
+    <p id="msg">Lorem ipsum dolor sit, amet 
+        consectetur adipisicing elit. Pariatur, except
+        uri?</p>
+        <button id="btn">change text</button>
+
+    <script>
+    
+//   let naam = "Radha";
+
+//   setTimeout(() => {
+//     alert("Hello " + naam);
+//   }, 3000);
+//   clearTimeout+(setvalue);
+
+
+//   setInterval(() => {
+//   let time = new Date();
+//   console.log(`Current Time: ${time.toLocaleTimeString()}`);
+// }, 1000);
+
+
+// let para = document.querySelector("p");
+// setInterval(() => {
+//   let time = new Date();
+//   para.innerText = `Time : ${time.toLocaleTimeString()}`;
+// }, 1000);
+// clearInterval(para);
+
+// document.querySelector("#open")
+// .addEventListener("click",() => {
+//     open("https://ganeshdutt.vercel.app");
+
+// });
+
+//  document.querySelector("#close")
+//  .addEventListener("click",() => {
+// close();
+//  });
+
+//  document.querySelector("#print")
+//  .addEventListener("click",() => {
+
+//     print();
+//  });
+
+
+
+// let para = document.querySelector("p");
+
+// document.querySelector("#change")
+// .addEventListener("click",() => {
+    
+//     para.innerText = "text color is changed";
+//     para.style.color ="red";
+// });
+
+
+
+// let heading =document.querySelector("h1");
+// document.querySelector("#btn")
+// .addEventListener("click",() => {
+//     heading.innerHTML = "welcome to java script";
+//     heading.style.color = "blue";
+//     document.body.style.backgroundColor = "lightYellow";
+// });
+
+
+
+
+document.querySelector("#btn").addEventListener("click", () => {
+  document.querySelector("#msg").textContent = "Button clicked!";
+});
+
+
+
+</script>
+</body>
+</html>

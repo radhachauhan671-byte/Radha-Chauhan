@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="mgs">Lorem ipsum, dolor sit 
+        amet consectetur adipisicing elit.
+         Magni quis nemo odit harum. Voluptatibus ut quod 
+         totam eaque, quos, deleniti minus sequi quibusdam, 
+         at quidem culpa odit necessitatibus
+          quaerat et.</p>
+    <button id="btn">chnage text</button>
+    <script>
+        //  mgs = document.querySelector("#mgs");
+        // document.querySelector("#btn").addEventListener("click",() => {
+        //     document.querySelector("#mgs").textContent = "button clicked!";
+
+        //     mgs.style.color="red";
+        //     mgs.style.fontSize = "40px";
+        //     mgs.style.textAilgn = "center";
+        //     mgs.style.fontWeight = "bold";
+        //     mgs.style.backgroundColor = "gray";
+
+        // });
+
+
+         mgs = document.querySelector("#mgs");
+        document.querySelector("#btn").addEventListener("click",() => {
+            setTimeout(() => {
+            mgs.textContent = "button clicked!";
+
+            mgs.style.color="red";
+            mgs.style.fontSize = "40px";
+            mgs.style.textAlign = "center";
+            mgs.style.fontWeight = "bold";
+            mgs.style.backgroundColor = "gray";
+            },2000);
+
+        });
+    </script>
+</body>
+</html>

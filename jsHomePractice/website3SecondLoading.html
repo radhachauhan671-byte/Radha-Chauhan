@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      *{
+        background-color: black;
+      }
+      #loading{
+        
+        font-size: 50px;
+        color: blueviolet;
+        font-weight: bold;
+        text-align: center;
+        margin-top: 300px;
+
+      }
+   #content {
+      display: none;
+      text-align: center;
+      margin-top: 100px;
+      font-family: Arial, sans-serif;
+      font-size: 50px;
+      color: brown;
+    }
+</style>
+</head>
+
+
+<body>
+
+<p id="loading">Loading...</p>
+
+
+<div id="content">
+    <h1>Hello Guys!</h1>
+    <p>How Are You</p>
+    
+    </div>
+
+<script>
+    setTimeout( ()=> {
+      document.getElementById("loading").style.display = "none";
+      document.getElementById("content").style.display = "block";
+    }, 3000);
+  </script>
+  </body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+
+  <style>
+    .warning {
+      color: red;
+      margin-top: 4px;
+    }
+
+    #successMessage {
+      color: green;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+
+  <label for="name">Name</label><br>
+  <input type="text" id="name">
+  <div id="nameWarning" class="warning"></div>
+  <br>
+
+  <label for="email">Email</label><br>
+  <input type="text" id="email">
+  <div id="emailWarning" class="warning"></div>
+  <br>
+
+  <label for="password">Password</label><br>
+  <input type="password" id="password">
+  <div id="passwordWarning" class="warning"></div>
+  <br>
+
+  <button type="button" onclick="validateForm()">Submit</button>
+  <div id="successMessage"></div>
+
+  <script>
+    function validateForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value;
+
+      let valid = true;
+
+      if (name === "") {
+        document.getElementById("nameWarning").textContent = "Enter name";
+        valid = false;
+      } else {
+        document.getElementById("nameWarning").textContent = "";
+      }
+
+      if (email === "") {
+        document.getElementById("emailWarning").textContent = "Enter email";
+        valid = false;
+      } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        document.getElementById("emailWarning").textContent =
+          "Write a valid email address";
+        valid = false;
+      } else {
+        document.getElementById("emailWarning").textContent = "";
+      }
+
+      if (password === "") {
+        document.getElementById("passwordWarning").textContent =
+          "Enter password";
+        valid = false;
+      } else if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+        document.getElementById("passwordWarning").textContent =
+          "Password mein ek special character zaroori hai";
+        valid = false;
+      } else {
+        document.getElementById("passwordWarning").textContent = "";
+      }
+
+      if (valid) {
+        document.getElementById("successMessage").textContent =
+          "Form submitted successfully!";
+
+        document.getElementById("name").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("password").value = "";
+      } else {
+        document.getElementById("successMessage").textContent = "";
+      }
+    }
+
+    document.querySelectorAll("input").forEach(function (input) {
+      input.addEventListener("input", function () {
+        document.getElementById(input.id + "Warning").textContent = "";
+        document.getElementById("successMessage").textContent = "";
+      });
+    });
+  </script>
+
+</body>
+</html>

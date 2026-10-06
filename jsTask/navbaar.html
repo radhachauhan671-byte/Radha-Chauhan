@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 10px;
+        }
+        .sideMenu {
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 250px;
+            max-width: 80vw;
+            height: 100vh;
+            background-color:rgb(17, 16, 16);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s linear;
+            padding: 30px;
+            transform: translateX(100%);
+        }
+
+        .sideMenu.active {
+            transform: translateX(0);
+        }
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+        .closeIcon {
+            font-size: 50px;
+            border: 3px solid white;
+            text-align: center;
+            border-radius: 30px;
+            cursor: pointer;
+            color: white;
+            width: fit-content;
+        }
+    </style>
+</head>
+<body>
+    <nav class="flex items-center bg-gray-950 py-3 px-4 md:px-10 text-white justify-between text-xl">
+        <div class="logo text-lg md:text-2xl font-bold hover:text-purple-700">LOGO</div>
+
+        
+        <ul class="hidden min-[650px]:flex gap-8 text-lg">
+            <li class="cursor-pointer hover:text-purple-600">Home</li>
+            <li class="cursor-pointer hover:text-purple-600">About</li>
+            <li class="cursor-pointer hover:text-purple-600">Content</li>
+            <li class="cursor-pointer hover:text-purple-600">Project</li>
+            <li class="cursor-pointer hover:text-purple-600">Services</li>
+        </ul>
+
+        
+        <div class="burgerIcon min-[650px]:hidden text-2xl cursor-pointer">☰</div>
+
+        
+        <div class="sideMenu">
+            <div>
+                <div class="closeIcon">&times;</div>
+                <ul class="mt-8 flex flex-col gap-4 text-lg">
+                    <li>Home</li>
+                    <li>About</li>
+                    <li>Content</li>
+                    <li>Project</li>
+                    <li>Services</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<section class="bg-[#0a0e1a] min-h-screen flex items-center px-6 py-16">
+  <div class="max-w-xl mx-auto">
+    <p class="text-blue-400 text-lg mb-2">Hello, I'm</p>
+
+    <h1 class="font-extrabold leading-none">
+      <span class="block text-white text-6xl sm:text-7xl">RADHA</span>
+      <span class="block text-slate-600 text-6xl sm:text-7xl">DAGAR</span>
+    </h1>
+
+    <p class="text-white text-2xl font-bold mt-6 flex items-center">
+  I'm a <span id="typewriter" class="text-indigo-400 ml-2"></span>
+  <span class="w-0.5 h-6 bg-purple-500 ml-1 animate-pulse"></span>
+</p>
+    <p class="text-slate-400 mt-4">
+      Full Stack MERN Developer &amp; Trainer with a passion for building
+      beautiful, functional, and scalable web applications. I turn
+      complex logic into smooth digital experiences.
+    </p>
+
+    <div class="flex flex-wrap items-center gap-3 mt-8">
+      <div class="flex items-center gap-2 bg-slate-800/60 rounded-full px-4 py-2">
+        <span class="text-white text-sm"> ✉️ radhechauhan673@gmail.com</span>
+      </div>
+      
+
+      <div><button class=" flex gap-2 mt-0 px-8 py-4 rounded-full text-white font-bold bg-purple-600">
+    LET'S TALK  
+    </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-[#0a0e1a] px-6 py-16">
+  <div class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-6">
+
+    <div class="bg-slate-800/50 rounded-2xl p-6 text-center border border-slate-700">
+      <h2 class="counter text-white text-4xl font-bold" data-target="500">0</h2>
+      <p class="text-slate-400 mt-2">student trained</p>
+    </div>
+
+    <div class="bg-slate-800/50 rounded-2xl p-6 text-center border border-slate-700">
+      <h2 class="counter text-white text-4xl font-bold" data-target="100">0</h2>
+      <p class="text-slate-400 mt-2">Project completed</p>
+    </div>
+
+    <div class="bg-slate-800/50 rounded-2xl p-6 text-center border border-slate-700">
+      <h2 class="counter text-white text-4xl font-bold" data-target="1000">0</h2>
+      <p class="text-slate-400 mt-2">Hours of coading</p>
+    </div>
+
+    <div class="bg-slate-800/50 rounded-2xl p-6 text-center border border-slate-700">
+      <h2 class="counter text-white text-4xl font-bold" data-target="500">0</h2>
+      <p class="text-slate-400 mt-2">community strong</p>
+    </div>
+
+  </div>
+</section>
+
+
+
+    <script>
+        const burgerIcon = document.querySelector(".burgerIcon");
+        const sideMenu = document.querySelector(".sideMenu");
+        const closeMenu = document.querySelector(".closeIcon");
+
+        burgerIcon.addEventListener("click", () => {
+            sideMenu.classList.toggle("active");
+        });
+
+        closeMenu.addEventListener("click", () => {
+            sideMenu.classList.remove("active");
+        });
+
+
+
+
+  let words = ["Full Stack Developer", "Content Creator", "Problem Solver"];
+let el = document.getElementById("typewriter");
+
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+
+function type() {
+  const currentWord = words[wordIndex];
+
+  if (isDeleting) {
+    charIndex--;
+    el.textContent = currentWord.substring(0, charIndex);
+  } else {
+    charIndex++;
+    el.textContent = currentWord.substring(0, charIndex);
+  }
+
+  let speed = isDeleting ? 50 : 100;
+
+  if (!isDeleting && charIndex === currentWord.length) {
+    speed = 1500; 
+    isDeleting = true;
+  } else if (isDeleting && charIndex === 0) {
+    isDeleting = false;
+    wordIndex = (wordIndex + 1) % words.length;
+    speed = 300; 
+  }
+
+  setTimeout(type, speed);
+}
+
+type();
+
+
+
+const counters = document.querySelectorAll(".counter");
+
+counters.forEach((counter) => {
+  const target = +counter.getAttribute("data-target");
+  const duration = 1500; 
+  const stepTime = 40;    
+  const totalSteps = duration / stepTime;
+  let step = 0;
+
+  const increment = target / totalSteps;
+  let current = 0;
+
+  const updateCounter = () => {
+    step++;
+    current += increment;
+
+    if (step >= totalSteps) {
+      counter.textContent = target + "+";
+    } else {
+      counter.textContent = Math.floor(current);
+      setTimeout(updateCounter, stepTime);
+    }
+  };
+
+  updateCounter();
+});
+    </script>
+</body>
+</html>
