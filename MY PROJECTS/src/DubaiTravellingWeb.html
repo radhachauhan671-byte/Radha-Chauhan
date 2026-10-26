@@ -1,0 +1,1492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visit Dubai</title>
+    <link href="./output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css" integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    
+    <style>
+  .feature-img-2 {
+    
+    height: 500px;
+    width: 750px;
+    object-fit: bottom;
+    border-radius: 2rem 0 0 0;
+    justify-content: none;
+  }
+
+  .read-btn {
+    color: #075985;
+    font-weight: 700;
+    width: 200px;
+    padding-left: 0;
+    margin-left: 20px;
+  
+  }
+  .read-btn:hover {
+    text-decoration: underline;
+  }
+  .like-button{
+    margin-left: 150px;
+  
+
+  }
+  .feature-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;  
+  text-align: left;
+  padding-top: 50px;
+  height: 500px;
+    width: 700px;
+    
+  border-top: 2px solid #fff;
+  border-bottom: 2px solid #fff;
+  border-right: 2px solid #fff;
+  border-radius: 0 1rem 1rem 0;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+
+}
+.feature-text {
+  padding: 7rem;
+}
+.See-more-articles{
+  color:#075985;
+  font-weight: bold;
+  margin-top: -60px;
+}
+  @media (hover: hover) {
+ .hover\:text-white:hover {
+ color: var(--color-white)
+ }
+}
+.Tabbed-selectable-card-grid{
+  background-color: rgb(218, 216, 216);
+  margin: 20px;
+  padding: -10px;
+
+}
+.tab-btn {
+  transition: background-color 0.2s ease;
+}
+.tab-btn:hover {
+  background-color: #26607f;
+  color: #fff;   /* sky-200 */
+}
+
+.persona-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.thing-card { border-radius: 1rem; }
+
+
+  .loc-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.25rem 1.5rem;
+    margin-top: 2rem;
+  }
+  @media (min-width: 640px) {
+    .loc-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  }
+  @media (min-width: 1024px) {
+    .loc-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  }
+  .loc-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    text-align: left;
+    color: #6b7280;
+    cursor: pointer;
+    background: none;
+    border: 0;
+    transition: color 0.2s ease;
+  }
+  .loc-item i {
+    font-size: 1.25rem;
+    color: #9ca3af;              
+    transition: color 0.2s ease;
+  }
+  .loc-item:hover,
+  .loc-item:hover i {
+    color: #075985;             
+  }
+
+
+
+  
+  .wx-section {
+    background-color: #f4f4f4;
+    border-bottom: 6px solid #a3246f;
+    padding: 2rem 1.5rem 3rem;
+    color: #111827;
+  }
+  .wx-title {
+    font-size: 1.875rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+  .wx-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  /* LEFT: temperature */
+  .wx-now {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+  }
+  .wx-temp {
+    font-size: 4.5rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  .wx-icon {
+    width: 5.5rem;
+    height: 5.5rem;
+    color: #a3246f;
+    flex-shrink: 0;
+  }
+  .wx-cond {
+    font-size: 1.75rem;
+    font-weight: 500;
+  }
+  .wx-units {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+  .wx-unit {
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #075985;               /* inactive: sky-800 */
+  }
+  .wx-unit.active {
+    color: #111827;               /* active: black, bold */
+    font-weight: 600;
+    cursor: default;
+  }
+  .wx-unit:not(.active):hover { text-decoration: underline; }
+
+  /* RIGHT: stats */
+  .wx-stats {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem 1rem;
+  }
+  .wx-label {
+    font-size: 0.95rem;
+    color: #111827;
+  }
+  .wx-value {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #a3246f;
+    margin-top: 0.25rem;
+  }
+  .wx-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    margin-top: 1.75rem;
+    font-weight: 600;
+    color: #075985;
+    text-decoration: none;
+  }
+  .wx-more:hover { text-decoration: underline; }
+
+  /* LAPTOP */
+  @media (min-width: 1024px) {
+    .wx-section { padding: 2.5rem 1.5rem 4rem; }
+    .wx-wrap {
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+    .wx-left  { flex: 0 0 40%; }
+    .wx-right { flex: 1; padding-top: 1.25rem; }
+    .wx-stats { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  }
+  .wx-hr {
+  border: 0;
+  border-top: 6px solid #a3246f;   /* line ki motai aur color */
+  margin: 0;
+  width: 100%;
+}
+.fcols {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  column-gap: 4rem;          /* columns ke beech gap */
+  row-gap: 0.5rem;
+}
+.fcols h3 {
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: #111827;
+  margin: 0 0 2rem;          /* heading ke neeche gap */
+}
+.fcols ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;               /* links ke beech gap */
+}
+.fcols li {
+  line-height: 2;            /* line height */
+}
+.fcols a {
+  color: #374151;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.fcols a:hover {
+  color: #075985;            /* sky-800 */
+  text-decoration: underline;
+}
+
+@media (min-width: 1024px) {
+  .fcols {
+    flex-wrap: nowrap;
+    column-gap: 2rem;        /* laptop pe columns ke beech zyada gap */
+    padding-right: 4rem;     /* right side ki jagah */
+  }
+}
+.fbottom {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.fbottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2.25rem;      /* links ke beech left-right gap */
+  row-gap: 1rem;            /* links ke beech upar-neeche gap (wrap hone par) */
+}
+.fbottom-links a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.fbottom-links a:hover {
+  color: #075985;           /* sky-800 */
+  text-decoration: underline;
+}
+.fbottom-copy { margin-top: 1.25rem; }
+.fbottom-right p { margin: 0 0 1rem; }
+.fbottom-right strong { font-weight: 600; color: #111827; }
+
+@media (min-width: 1024px) {
+  .fbottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .fbottom-right {
+    margin-left: auto;       /* right end mein dhakelta hai */
+    text-align: right;
+  }
+}
+.sb {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 50;
+  display: flex;
+  align-items: stretch;
+  justify-content: space-between;
+  background: #fff;
+  box-shadow: 0 -6px 16px rgba(0, 0, 0, 0.14);   /* upar ki shadow */
+}
+.sb-group {
+  display: flex;
+  align-items: stretch;
+}
+.sb a {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.25rem 1.5rem;
+  color: #0b5c84;                       /* icon ka blue */
+  text-decoration: none;
+  border-right: 1px solid #e5e7eb;      /* patli vertical line */
+  transition: background-color 0.2s ease;
+}
+.sb a:hover { background: #f0f9ff; }
+.sb a:focus-visible {
+  outline: 2px solid #111827;           /* image wala black box */
+  outline-offset: -4px;
+  border-radius: 4px;
+}
+.sb a:last-child { border-right: 0; }
+.sb i { font-size: 1.6rem; }
+.sb-label {
+  display: none;
+  color: #4b5563;
+  font-size: 1rem;
+}
+@media (min-width: 640px) {
+  .sb-label { display: inline; }
+}
+
+/* page ke content ko bar ke peeche chhupne se bachane ke liye */
+body { padding-bottom: 5rem; }
+</style>
+
+
+
+
+
+
+
+
+  </head>
+<body>
+    <header class=" sticky top-0 z-50 bg-white shadow-[0_4px_12px_rgba(255,255,255,0.8)] text-gray-600 body-font">
+     <div class="w-full max-w-none mx-auto flex items-center justify-between p-3 md:p-5">
+      
+      <img class="ml-3 mt-5 h-10 w-auto" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_1_dubai-gov-c.svg" alt="Dubai logo">
+    </a>
+    <nav class="hidden md:ml-auto md:mr-auto md:flex md:flex-wrap md:items-center md:justify-center text-base">
+      <a class="mr-5 hover:bg-sky-800  hover:text-white hover:p-2 hover:rounded-2xl">Explore DUBAI</a>
+      <a class="mr-5 hover:bg-sky-800  hover:text-white hover:p-2 hover:rounded-2xl">Things To Do</a>
+      <a class="mr-5 hover:bg-sky-800  hover:text-white hover:p-2 hover:rounded-2xl">Eat & Drink</a>
+      <a class="mr-5 hover:bg-sky-800  hover:text-white hover:p-2 hover:rounded-2xl">Events & Festivals</a>
+      <a class="mr-5 hover:bg-sky-800  hover:text-white hover:p-2 hover:rounded-2xl">Deals & Offers</a>
+      
+  
+    </nav>
+    <button class="inline-flex items-center bg-white border-0 p-3 focus:outline-none hover:bg-sky-800 hover:text-white  rounded-[40%] p-[10px] text-base mt-4 md:mt-0 mr-0.5"><i class="fa-solid fa-ellipsis"></i>
+        
+    </button>
+    <button class="inline-flex items-center bg-white border-0  p-3 focus:outline-none hover:bg-sky-800  hover:text-white rounded-[40%] p-[10px] text-base mt-4 md:mt-0 mr-0.5"> <i class="fa-solid fa-right-to-bracket"></i> 
+    </button>
+    
+    <button class="inline-flex items-center bg-white border-0 p-3  focus:outline-none hover:bg-sky-800  hover:text-white rounded-[40%] p-[10px] text-base mt-4 md:mt-0 mr-0.5">
+      <i class="fa-solid fa-magnifying-glass"></i>
+        
+    </button>
+    <img class="ml-3 m-0.5 mt-0 h-10 w-auto" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_5_dubai-flag-logo-5.svg" alt="Dubai logo">
+    
+  </div>
+  </header>
+
+
+  <section class="text-white body-font">
+ <div class="relative w-full max-w-none mx-auto flex px-3 py-18 items-center justify-center flex-col">
+  
+    <img
+  class="mx-1 my-0 w-[calc(100%-1rem)] h-[700px] rounded-2xl object-cover"
+  src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_97_hb-updates-eur-option3.jpg"
+  alt="Dubai logo">
+<div class=" absolute inset-y-0 left-3 flex w-full flex-col items-start justify-center px-6 pt-0 text-left lg:w-2/3">
+      <h1 class=" mb-4 text-5xl font-bold text-white sm:text-6xl md:text-7xl lg:text-6xl ">Dubai’s sunshine <br> session is here</h1>
+      <p class=" mb-8 leading-relaxed">Make the most of beach days, desert adventures and <br> alfresco dining across the city.</p>
+
+      <div class="flex justify-center">
+        <button class="inline-flex text-black bg-white border-2 border-white  rounded-2xl py-2 px-5 focus:outline-none text-lg  shadow-[0_4px_12px_rgba(255,255,255,0.8)]">Explore Dubai<i class="fa-solid fa-arrow-right mt-1.5"></i></button>
+         </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="text-gray-600 body-font ">
+ <div class="w-full max-w-none px-3 py-10 mx-auto">
+    <div class="flex text-center w-full mb-20">
+      <h1 class="sm:text-3xl text-3xl font-medium title-font text-gray-900">Enjoy a hassle-free Dubai holiday</h1>
+    </div><br>
+   <div class="flex flex-wrap -m-3">
+      
+    <div class="w-full p-3 md:w-1/2 lg:w-1/3">
+    <div class="group flex h-full flex-col rounded-lg bg-gray-100 p-5 transition-colors hover:bg-sky-800 hover:text-white lg:p-7">
+          <div class="mb-3 flex flex-col items-start">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-800 transition-colors group-hover:bg-white">
+            <span
+              class="h-5 w-5 bg-white transition-colors group-hover:bg-sky-800"
+              style="-webkit-mask: url('../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/download\ \(4s\).svg') center / contain no-repeat; mask: url('../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/download%20(5).svg') center / contain no-repeat;"
+            ></span>
+          </div>
+            <h2 class="mt-3 text-lg font-medium hover:text-white">Apply for a tourist visa</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base"> Find out whether you need a tourist visa and how to start the online application process.
+                </p>
+           </div>
+           <a class="mt-3 flex w-full items-center justify-end hover:text-white">
+ 
+             <i class="fa-solid fa-angle-right"></i>
+            </a>
+        </div>
+      </div>
+     <div class="w-full p-3 md:w-1/2 lg:w-1/3">
+        <div class="group flex h-full flex-col rounded-lg bg-gray-100 p-5 transition-colors hover:bg-sky-800 hover:text-white lg:p-7">
+          <div class="mb-3 flex flex-col items-start">
+            <div class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-800 transition-colors group-hover:bg-white">
+          <span
+            class="h-5 w-5 bg-white transition-colors group-hover:bg-sky-800"
+            style="-webkit-mask: url('../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/download%20(6).svg') center / contain no-repeat; mask: url('../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/download%20(4).svg') center / contain no-repeat;">
+          </span>
+           </div>
+            <h2 class="mt-3 text-lg font-medium  hover:text-white">Explore events in Dubai</h2>
+          </div>
+          <div class="flex-grow">
+            <p class="leading-relaxed text-base">From live concerts and cultural events to sporting activities and comedy shows, find all the latest events in the city.</p>
+           
+          </div>
+          <a class="mt-3 flex w-full items-center justify-end hover:text-white">
+      
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+            </div>
+          </div>
+          <div class="w-full p-3 md:w-1/2 lg:w-1/3">
+            <div class="group flex h-full flex-col rounded-lg bg-gray-100 p-5 transition-colors hover:bg-sky-800 hover:text-white lg:p-7">
+              <div class="mb-3 flex flex-col items-start">
+             <div class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-800 transition-colors group-hover:bg-white">
+              <span
+              class="h-5 w-5 bg-white transition-colors group-hover:bg-sky-800"
+              style="-webkit-mask: url('../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/download%20(4).svg') center / contain no-repeat; mask: url('../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/download%20(5).svg') center / contain no-repeat;"
+            ></span>
+             </div>
+           
+             <h2 class="mt-3 text-lg font-medium hover:text-white">
+               Browse and book attractions
+             </h2>
+           </div>
+                <p class="leading-relaxed text-base">Discover the best things to do in Dubai, from top attractions to restaurants and entertainment experiences.
+                  </p>
+                </div>
+                <a class="mt-3 flex w-full items-center justify-end  hover:text-white">
+      
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+            </div>
+          </div>
+    </div>
+  </div>
+
+  <button class="my-2 ml-3 inline-flex items-center gap-2 rounded-3xl border-2 border-sky-800 bg-sky-800 px-4 py-3 text-white hover:bg-sky-900">
+  View all services <i class="fa-solid fa-angle-right"></i>
+</button>
+
+</section>
+
+
+
+<section class="text-white body-font">
+  <div class="w-full max-w-none px-3 py-24 mx-auto">
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-sky-800">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_7_dining-dubai-getty (1).jpg" alt="blog">
+          <div class="p-6">
+            <h3 class="tracking-widest text-xs title-font font-medium text-white mb-1">THINGS TO DO </h3>
+            <h1 class="title-font text-lg font-medium text-white mb-3 hover:underline">1.Discover Dubai’s Michelin-starred dining</h1>
+            <p class="leading-relaxed mb-3">Book a table at the city's latest Michelin Guide Dubai 2026 restaurants..</p>
+            <div class="flex items-center flex-wrap ">
+              <a class="text-white inline-flex items-center md:mb-2 lg:mb-0">Discover more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-sky-800">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_8_olioli-supplied-2023-3 (1).jpg" alt="blog">
+          <div class="p-6">
+            <h3 class="tracking-widest text-xs title-font font-medium text-white mb-1">THINGS TO DO</h3>
+            <h1 class="title-font text-lg font-medium text-white mb-3 hover:underline">2.Find Family-friendly fun and adventure.</h1>
+            <p class="leading-relaxed mb-3">Head out to Dubai's best kid-approved activities over the school holidays.
+            </p>
+            <div class="flex items-center flex-wrap">
+              <a class="text-white inline-flex items-center md:mb-2 lg:mb-0">Discover more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-sky-800">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_9_global-village-season-25-eventorganiser-oct-2020 (1).jpg" alt="blog">
+          <div class="p-6">
+            <h3 class="tracking-widest text-xs title-font font-medium text-white mb-1">14 OCTOBER</h3>
+            <h1 class="title-font text-lg font-medium text-white mb-3 hover:underline">3.Experience global village New season</h1>
+            <p class="leading-relaxed mb-3">Immerse yourself in a world of culture and entertainment at Global Village's 31st edition.
+            </p>
+            <div class="flex items-center flex-wrap ">
+              <a class="text-white inline-flex items-center md:mb-2 lg:mb-0">Discover more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-sky-800">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_8_dubai-comedy-festival-eventorganiser-jul-2026.jpg" alt="blog">
+          <div class="p-6">
+            <h3 class="tracking-widest text-xs title-font font-medium text-white mb-1">9-18 OCTOBER</h3>
+            <h1 class="title-font text-lg font-medium text-white mb-3 hover:underline">4.Have a laugh at Dubai comedy festival</h1>
+            <p class="leading-relaxed mb-3">Get ready to laugh out loud at world-class acts and hilarious performances.</p>
+            <div class="flex items-center flex-wrap">
+              <a class="text-white inline-flex items-center md:mb-2 lg:mb-0">Discover more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+</section>
+
+
+
+
+
+<section class="text-gray-600 body-font">
+  <div class="container mt-2.5 flex md:flex-row flex-col items-start text-left w-full max-w-none px-3 py-24">
+    
+    
+    <div class="flex md:flex-row flex-col items-start w-full">
+      
+      <div class="md:w-3/5 mb-10 md:mb-0 overflow-hidden lg:w-3/5 w-full lg:mb-0 ">
+        <img class="feature-img object-cover object-center rounded-2xl transition-transform duration-300 hover:scale-105" alt="hero" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_10_top-things-to-do-in-dubai-at-the-top-burj-khalifa-det.jpg">
+      </div>
+      
+      <div class="feature-text md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left  feature-text lg:w-2/5 w-full lg:items-start lg:text-left items-center text-left pt-40 px-3 ">
+        <h3 class="text-xs title-font font-medium text-black mb-1 text-left">THINGS TO DO</h3>
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900 hover:underline">
+          28 Amazing things to do in Dubai for the ultimate holiday
+        </h1>
+        <p class="mb-8 leading-relaxed text-left">Tick off the city's top things to do and places to visit.</p>
+        
+        <div class="flex justify-center">
+          <button class="read-btn my-2 ml-37.5 inline-flex items-center gap-2 text-sky-800 hover:underline text-left">Read Now <i class="fa-solid fa-chevron-right"></i></button>
+          <button class="like-button my-2 ml-37.5 inline-flex items-center gap-2 rounded-3xl border-2 border-sky-800 bg-sky-800 px-4 py-3 text-white">
+            <i class="fa-regular fa-heart"></i>
+          </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+
+<section class="text-white body-font">
+  <div class="w-full max-w-none px-3 py-24 mx-auto">
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden ">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_11_dubai-shopping-scene-hero.jpg" alt="blog">
+          <div class="p-6">
+            <h1 class="title-font text-lg font-medium text-black mb-3 hover:underline">Shop, Play and dine Dubai’s best mall</h1>
+            <h3 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">8 Min read </h3>
+           
+          </div>
+        </div>
+      </div>
+     <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_12_thegreenplanetjpg.jpg" alt="blog">
+          <div class="p-6">
+            
+            <h1 class="title-font text-lg font-medium text-black mb-3 hover:underline">Dubai’s top 10 attractions for kids</h1>
+            <h3 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">4 Min read</h3>
+            
+          </div>
+        </div>
+      </div>
+      <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_13_dfc-2023yoga-at-beach11-1jpg.jpg" alt="blog">
+          <div class="p-6">
+            <h1 class="title-font text-lg font-medium text-black mb-3 hover:underline">A guide to meditation centers and classes in Dubai </h1>
+             <h3 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">2 Min read</h3>
+           <div class="flex items-center flex-wrap ">
+              
+              
+            </div>
+          </div>
+        </div>
+      </div>
+       <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_14_south-korea-campaign-det-23koko.jpg" alt="blog">
+          <div class="p-6">
+            <h1 class="title-font text-lg font-medium text-black mb-3 hover:underline">Indulge in Dubai’s affordable luxuries</h1>
+            <h3 class="tracking-widest text-xs title-font font-medium text-gray-900 mb-1">4 Min read</h3>
+            <div class="flex items-center flex-wrap">
+              
+              
+             
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="See-more-articles ml-3  inline-flex items-center  rounded-1xl border-2 border-sky-800  px-4 py-3 hover:text-white hover:bg-sky-800 ">
+  See more articles <i class="fa-solid fa-angle-right"></i>
+</button>
+
+  
+</section>
+
+<section class="Tabbed-selectable-card-grid text-gray-600 body-font border-2 rounded-2xl bg-gray-400 m-10">
+  <div class="w-full max-w-none  mx-auto">
+    <div class="rounded-3xl bg-gray-200 p-6 lg:p-10">
+      <div class="flex flex-col gap-8 lg:flex-row">
+
+        <div class="lg:w-2/5">
+          <h2 class="title-font text-4xl font-medium leading-tight text-gray-900 sm:text-5xl">
+            Experience Dubai through the eyes of a...
+          </h2>
+        </div>
+
+        <div class="lg:w-3/5">
+
+          <div class="mb-5 flex rounded-full p-1  bg-white px-4 py-1 text-center text-gray-900 shadow transition ">
+            <button data-tab="first"
+                    class="tab-btn flex-1 rounded-full bg-white px-4 py-3 text-center text-gray-900 shadow transition  ">
+              First-time visitor
+            </button>
+            <button data-tab="returning"
+                    class="tab-btn flex-1 rounded-full px-4 py-3 text-center text-gray-600 transition ">
+              Returning visitor
+            </button>
+          </div>
+
+          <div id="tab-first" class="persona-grid tab-panel grid grid-cols-3 gap-4 sm:grid-cols-3">
+
+            <button type="button" class="persona-card group relative h-40 overflow-hidden rounded-xl text-left sm:h-48">
+              <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_158_family-friendly-fun.jpg" alt="Family-friendly fun" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <span class="check absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-white/80 text-sm text-white transition">
+                <i class="fa-solid fa-check hidden"></i>
+              </span>
+              <span class="absolute bottom-3 left-3 pr-3 text-sm font-medium text-white">Family-friendly fun</span>
+            </button>
+
+            <button type="button" class="persona-card group relative h-40 overflow-hidden rounded-xl text-left sm:h-48">
+              <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_159_transit-and-stopover.jpg" alt="Stopover escapes" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <span class="check absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-white/80 text-sm text-white transition">
+                <i class="fa-solid fa-check hidden"></i>
+              </span>
+              <span class="absolute bottom-3 left-3 pr-3 text-sm font-medium text-white">Stopover escapes</span>
+            </button>
+
+            <button type="button" class="persona-card group relative h-40 overflow-hidden rounded-xl text-left sm:h-48">
+              <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_160_must-try-experiences.jpg" alt="Must-try experiences" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <span class="check absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-white/80 text-sm text-white transition">
+                <i class="fa-solid fa-check hidden"></i>
+              </span>
+              <span class="absolute bottom-3 left-3 pr-3 text-sm font-medium text-white">Must-try experiences</span>
+            </button>
+
+            <button type="button" class="persona-card group relative h-40 overflow-hidden rounded-xl text-left sm:h-48">
+              <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_161_budget-options.jpg" alt="Budget options" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <span class="check absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-white/80 text-sm text-white transition">
+                <i class="fa-solid fa-check hidden"></i>
+              </span>
+              <span class="absolute bottom-3 left-3 pr-3 text-sm font-medium text-white">Budget options</span>
+            </button>
+
+            <button type="button" class="persona-card group relative h-40 overflow-hidden rounded-xl text-left sm:h-48">
+              <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_19_shopping-and-souks.jpg" alt="Shopping and souks" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <span class="check absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-white/80 text-sm text-white transition">
+                <i class="fa-solid fa-check hidden"></i>
+              </span>
+              <span class="absolute bottom-3 left-3 pr-3 text-sm font-medium text-white">Shopping and souks</span>
+            </button>
+
+            <button type="button" class="persona-card group relative h-40 overflow-hidden rounded-xl text-left sm:h-48">
+              <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_162_history-and-heritage.jpg" alt="History and heritage" class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+              <span class="check absolute right-3 top-3 flex h-7 w-7 items-center justify-center rounded-full border-2 border-white bg-white/80 text-sm text-white transition">
+                <i class="fa-solid fa-check hidden"></i>
+              </span>
+              <span class="absolute bottom-3 left-3 pr-3 text-sm font-medium text-white">History and heritage</span>
+            </button>
+
+          </div>
+  
+          <div id="tab-returning" class="tab-panel hidden">
+  <div class="grid grid-cols-3 gap-4"></div>
+</div>
+          <button id="curate-btn" disabled
+                  class="mt-5 inline-flex items-center gap-2 rounded-full bg-gray-100 px-6 py-3 font-medium text-gray-400 transition disabled:cursor-not-allowed">
+            Curate my holiday <i class="fa-solid fa-arrow-right"></i>
+          </button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="text-gray-600 body-font">
+  <div class="w-full max-w-none px-6 py-16 mx-auto">
+
+    <h2 class="title-font mb-6 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+      Find things to do
+    </h2>
+
+    <!-- FILTER CHIPS -->
+    <div class="mb-8 flex gap-3 overflow-x-auto pb-2">
+      <button data-filter="all"
+              class="filter-btn shrink-0 rounded bg-gray-600 px-5 py-3 text-white transition">All</button>
+      <button data-filter="adventure"
+              class="filter-btn shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Adventure</button>
+      <button data-filter="arts"
+              class="filter-btn shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Arts &amp; Culture</button>
+      <button data-filter="spas"
+              class="filter-btn shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Spas</button>
+      <button data-filter="sights"
+              class="filter-btn shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Sights &amp; Attractions</button>
+      <button data-filter="entertainment"
+              class="filter-btn shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Entertainment</button>
+    </div>
+
+    <!-- CARDS -->
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4" style="gap:2rem">
+
+      <!-- CARD 1 -->
+      <article data-category="adventure"
+               class="thing-card flex flex-col rounded-2xl border border-gray-200 bg-white shadow-lg shadow-gray-300">
+        <div class="relative">
+          <div class="h-56 w-full overflow-hidden rounded-t-2xl">
+            <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_21_deep-dive-dubai-abandoned-house (1).jpg" alt="Deep Dive Dubai"
+                 class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          </div>
+          <button type="button" aria-label="Save"
+                  class="heart-btn absolute -bottom-6 right-4 z-10 flex h-12 w-12 items-center justify-center rounded bg-white text-sky-800 shadow-md transition hover:bg-sky-50">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+        </div>
+        <div class="flex flex-1 flex-col p-5 pb-8" style="padding-bottom:2rem">
+          <p class="mb-3 pr-14 text-xs uppercase tracking-wide text-gray-600">Adventure</p>
+          <h3 class="mb-3 text-xl font-medium text-gray-900">Deep Dive Dubai</h3>
+          <p class="mb-5 leading-relaxed">Plunge to new depths at a record-breaking pool</p>
+          <div class="mt-auto flex items-center gap-2 text-xs font-bold text-gray-900">
+            <i class="fa-brands fa-tripadvisor text-lg"></i>
+            <span class="flex gap-0.5 text-[10px] text-green-600">
+              <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i>
+            </span>
+            <span>141 REVIEWS</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article data-category="sights"
+               class="thing-card flex flex-col rounded-2xl border border-gray-200 bg-white shadow-lg shadow-gray-300">
+        <div class="relative">
+          <div class="h-56 w-full overflow-hidden rounded-t-2xl">
+            <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_23_ski-dubai (1).jpg" alt="Ski Dubai"
+                 class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          </div>
+          <button type="button" aria-label="Save"
+                  class="heart-btn absolute -bottom-6 right-4 z-10 flex h-12 w-12 items-center justify-center rounded bg-white text-sky-800 shadow-md transition hover:bg-sky-50">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+        </div>
+        <div class="flex flex-1 flex-col p-5 pb-8" style="padding-bottom:2rem">
+          <p class="mb-3 pr-14 text-xs uppercase tracking-wide text-gray-600">Sights &amp; Attractions</p>
+          <h3 class="mb-3 text-xl font-medium text-gray-900">Ski Dubai</h3>
+          <p class="mb-5 leading-relaxed">Play in the snow and go skiing in Dubai</p>
+          <div class="mt-auto flex items-center gap-2 text-xs font-bold text-gray-900">
+            <i class="fa-brands fa-tripadvisor text-lg"></i>
+            <span class="flex gap-0.5 text-[10px] text-green-600">
+              <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i>
+            </span>
+            <span>11,130 REVIEWS</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article data-category="entertainment"
+               class="thing-card flex flex-col rounded-2xl border border-gray-200 bg-white shadow-lg shadow-gray-300">
+        <div class="relative">
+          <div class="h-56 w-full overflow-hidden rounded-t-2xl">
+            <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_24_house-of-hype-1-supplied (1).jpg" alt="House of Hype"
+                 class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          </div>
+          <button type="button" aria-label="Save"
+                  class="heart-btn absolute -bottom-6 right-4 z-10 flex h-12 w-12 items-center justify-center rounded bg-white text-sky-800 shadow-md transition hover:bg-sky-50">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+        </div>
+        <div class="flex flex-1 flex-col p-5 pb-8" style="padding-bottom:2rem">
+          <p class="mb-3 pr-14 text-xs uppercase tracking-wide text-gray-600">Entertainment</p>
+          <h3 class="mb-3 text-xl font-medium text-gray-900">House of Hype</h3>
+          <p class="mb-5 leading-relaxed">Get your cool on at an immersive wonderland</p>
+          <div class="mt-auto flex items-center gap-2 text-xs font-bold text-gray-900">
+            <i class="fa-brands fa-tripadvisor text-lg"></i>
+            <span class="flex gap-0.5 text-[10px] text-green-600">
+              <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle-half-stroke"></i>
+            </span>
+            <span>71 REVIEWS</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article data-category="sights"
+               class="thing-card flex flex-col rounded-2xl border border-gray-200 bg-white shadow-lg shadow-gray-300">
+        <div class="relative">
+          <div class="h-56 w-full overflow-hidden rounded-t-2xl">
+            <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_25_dubai-aquarium-and-underwater-zoo (1).jpg" alt="Dubai Aquarium and Underwater Zoo"
+                 class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          </div>
+          <button type="button" aria-label="Save"
+                  class="heart-btn absolute -bottom-6 right-4 z-10 flex h-12 w-12 items-center justify-center rounded bg-white text-sky-800 shadow-md transition hover:bg-sky-50">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+        </div>
+        <div class="flex flex-1 flex-col p-5 pb-8" style="padding-bottom:2rem">
+          <p class="mb-3 pr-14 text-xs uppercase tracking-wide text-gray-600">Sights &amp; Attractions</p>
+          <h3 class="mb-3 text-xl font-medium text-gray-900">Dubai Aquarium and Underwater Zoo</h3>
+          <p class="mb-5 leading-relaxed">Make underwater discoveries at Dubai Mall</p>
+          <div class="mt-auto flex items-center gap-2 text-xs font-bold text-gray-900">
+            <i class="fa-brands fa-tripadvisor text-lg"></i>
+            <span class="flex gap-0.5 text-[10px] text-green-600">
+              <i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-solid fa-circle"></i><i class="fa-regular fa-circle"></i>
+            </span>
+            <span>17,060 REVIEWS</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- SEE MORE BUTTON -->
+    <div class="mt-12 flex justify-center">
+      <button id="see-more-btn"
+              class="inline-flex items-center gap-2 rounded-full border-2 border-sky-800 px-6 py-3 font-bold text-sky-800 transition hover:bg-sky-800 hover:text-white">
+        See more <i class="fa-solid fa-angle-right"></i>
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<section class="text-gray-600 body-font">
+  <div class="w-full max-w-none px-6 py-16 mx-auto">
+
+    <!-- HEADING -->
+    <h2 class="title-font mb-8 flex flex-wrap items-center gap-3 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+      Upcoming events in
+      <button type="button" class="inline-flex items-center gap-3 text-sky-800">
+        October <i class="fa-solid fa-chevron-down text-lg"></i>
+      </button>
+    </h2>
+
+    <!-- CARDS -->
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4" style="gap:2rem">
+
+      <!-- CARD 1 -->
+      <article class="flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md">
+        <div class="relative h-72 w-full overflow-hidden">
+          <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_28_shane-todd-dc-supplied-jul-2026.png" alt="Dubai Comedy Festival: Shane Todd"
+               class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs text-gray-700">Comedy shows</span>
+          <button type="button" aria-label="Save"
+                  class="event-heart absolute right-4 top-4 flex h-11 p-2 w-11 items-center justify-center rounded-full bg-white text-sky-800 transition hover:bg-white">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+          <div class="absolute bottom-4 left-4 rounded-xl bg-white px-3 py-2 text-center leading-tight"
+                  style="bottom:1rem; left:1rem;">
+          <p class="text-xl font-bold text-gray-900">16</p>
+          <p class="text-xs text-gray-700">OCT</p>
+        </div>
+                </div>
+        <div class="flex-1 p-5">
+          <h3 class="text-xl font-medium text-gray-900 hover:underline">Dubai Comedy Festival: Shane Todd</h3>
+        </div>
+        <hr class="border-t border-gray-200">
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4 text-gray-500">
+          <span class="flex items-center gap-3"><i class="fa-regular fa-calendar text-xl"></i> Remind me</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+      </article>
+
+      <!-- CARD 2 -->
+      <article class="flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md">
+        <div class="relative h-72 w-full overflow-hidden">
+          <img src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_24_house-of-hype-1-supplied (1).jpg" alt="Dubai Comedy Festival: Zarna Garg"
+               class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs text-gray-700">Comedy shows</span>
+          <button type="button" aria-label="Save"
+                  class="event-heart absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white  p-2 text-sky-800 transition hover:bg-white">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+          <div class="absolute bottom-4 left-4 rounded-xl bg-white px-3 py-2 text-center leading-tight"
+                  style="bottom:1rem; left:1rem;">
+               <p class="text-xl font-bold text-gray-900">16</p>
+               <p class="text-xs text-gray-700">OCT</p>
+             </div>
+                     </div>
+        <div class="flex-1 p-5">
+          <h3 class="text-xl font-medium text-gray-900 hover:underline">Dubai Comedy Festival: Zarna Garg</h3>
+        </div>
+        <hr class="border-t border-gray-200">
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4 text-gray-500">
+          <span class="flex items-center gap-3"><i class="fa-regular fa-calendar text-xl"></i> Remind me</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+      </article>
+
+      <!-- CARD 3 -->
+      <article class="flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md">
+        <div class="relative h-72 w-full overflow-hidden">
+          <img src="../../img//Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_30_crowdwork-ahmed-dcf-supplied-sept-2026 (1).jpg" alt="Dubai Comedy Festival: Crowd Work"
+               class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs text-gray-700">Dubai Comedy Festival</span>
+          <button type="button" aria-label="Save"
+                  class="event-heart absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full  p-2 bg-white text-sky-800 transition hover:bg-white">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+          <div class="absolute bottom-4 left-4 rounded-xl bg-white px-3 py-2 text-center leading-tight"
+     style="bottom:1rem; left:1rem;">
+  <p class="text-xl font-bold text-gray-900">16</p>
+  <p class="text-xs text-gray-700">OCT</p>
+</div>
+        </div>
+        <div class="flex-1 p-5">
+          <h3 class="text-xl font-medium text-gray-900 hover:underline">Dubai Comedy Festival: Crowd Work - Ahmed Saif and Bin Swelah</h3>
+        </div>
+
+        <hr class="border-t border-gray-200">
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4 text-gray-500">
+          <span class="flex items-center gap-3"><i class="fa-regular fa-calendar text-xl"></i> Remind me</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+      </article>
+
+      <!-- CARD 4 -->
+      <article class="flex flex-col overflow-hidden rounded-3xl border border-gray-200 bg-white shadow-md">
+        <div class="relative h-72 w-full overflow-hidden">
+          <img src="../../img//Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_31_home-centre-collective-dhf-supplied (1).jpg" alt="Home Centre Collective Season Two"
+               class="h-full w-full object-cover transition-transform duration-300 hover:scale-105">
+          <span class="absolute left-4 top-4 rounded-full bg-white px-3 py-1 text-xs text-gray-700">Live shows &amp; Concerts</span>
+          <button type="button" aria-label="Save"
+                  class="event-heart absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-white p-2 text-sky-800 transition hover:bg-white">
+            <i class="fa-regular fa-heart text-xl"></i>
+          </button>
+          <div class="absolute bottom-4 left-4 rounded-xl bg-white px-3 py-2 text-center leading-tight"
+             style="bottom:1rem; left:1rem;">
+          <p class="text-xl font-bold text-gray-900">16</p>
+          <p class="text-xs text-gray-700">OCT</p>
+        </div>
+        </div>
+        <div class="flex-1 p-5">
+          <h3 class="text-xl font-medium text-gray-900 hover:underline">Home Centre Collective Season Two</h3>
+        </div>
+        <hr class="border-t border-gray-200">
+        <div class="flex items-center justify-between border-t border-gray-200 px-5 py-4 text-gray-500">
+          <span class="flex items-center gap-3"><i class="fa-regular fa-calendar text-xl"></i> Remind me</span>
+          <i class="fa-solid fa-plus"></i>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- SEE MORE EVENTS -->
+    <div class="mt-12">
+      <button type="button"
+              class="rounded border border-sky-800 px-6 py-4 font-medium text-sky-800 transition hover:bg-sky-800 hover:text-white">
+        See more events
+      </button>
+    </div>
+
+  </div>
+</section>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.css">
+
+
+
+<section class="text-gray-600 body-font mt-10">
+  <div class="w-full max-w-none px-6 py-16 mx-auto">
+
+    <h2 class="title-font mb-6 text-3xl font-bold text-gray-900 sm:text-4xl lg:text-5xl">
+      Explore Dubai on the map
+    </h2>
+
+    <!-- CATEGORY CHIPS -->
+    <div class="mb-6 flex gap-3 overflow-x-auto pb-2">
+      <button data-cat="all" class="map-chip shrink-0 rounded bg-gray-600 px-5 py-3 text-white transition">All</button>
+      <button data-cat="sights" class="map-chip shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Sights &amp; Attractions</button>
+      <button data-cat="shopping" class="map-chip shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Shopping</button>
+      <button data-cat="culture" class="map-chip shrink-0 rounded bg-gray-100 px-5 py-3 text-gray-700 transition hover:bg-gray-200">Arts &amp; Culture</button>
+    </div>
+
+    <!-- MAP -->
+    <div id="map-box" class="relative z-0 overflow-hidden rounded-3xl border border-gray-200 shadow-md" style="isolation:isolate;">
+      <div id="dubai-map" style="height:520px; width:100%;"></div>
+    </div>
+
+    <!-- LOCATION LIST -->
+    <div id="loc-list" class="loc-grid"></div>
+
+  </div>
+</section>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.js"></script>
+<script>
+  // ----- LOCATIONS (nayi jagah yahan add karo) -----
+  const places = [
+    { name: 'Burj Khalifa',         cat: 'sights',   lat: 25.1972, lng: 55.2744 },
+    { name: 'Dubai Mall',           cat: 'shopping', lat: 25.1985, lng: 55.2796 },
+    { name: 'Museum of the Future', cat: 'sights',   lat: 25.2193, lng: 55.2818 },
+    { name: 'Dubai Frame',          cat: 'sights',   lat: 25.2349, lng: 55.3003 },
+    { name: 'Al Fahidi District',   cat: 'culture',  lat: 25.2637, lng: 55.2972 },
+    { name: 'Palm Jumeirah',        cat: 'sights',   lat: 25.1124, lng: 55.1390 },
+    { name: 'Dubai Marina',         cat: 'sights',   lat: 25.0805, lng: 55.1403 },
+    { name: 'Burj Al Arab',         cat: 'sights',   lat: 25.1412, lng: 55.1853 },
+    { name: 'Mall of the Emirates', cat: 'shopping', lat: 25.1181, lng: 55.2003 },
+    { name: 'Global Village',       cat: 'culture',  lat: 25.0720, lng: 55.3060 },
+    { name: 'Kite Beach',           cat: 'sights',   lat: 25.1580, lng: 55.2150 },
+    { name: 'City Walk',            cat: 'shopping', lat: 25.2080, lng: 55.2630 },
+    { name: 'La Mer',               cat: 'sights',   lat: 25.2330, lng: 55.2640 },
+    { name: 'Gold Souk',            cat: 'shopping', lat: 25.2866, lng: 55.2970 },
+    { name: 'Dubai Creek Park',     cat: 'culture',  lat: 25.2370, lng: 55.3340 }
+  ];
+
+  // ----- MAP -----
+  const map = L.map('dubai-map', { scrollWheelZoom: false }).setView([25.2048, 55.2708], 11);
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  const list = document.getElementById('loc-list');
+
+  places.forEach(p => {
+    p.marker = L.marker([p.lat, p.lng]).bindPopup('<b>' + p.name + '</b>').addTo(map);
+
+    const item = document.createElement('button');
+    item.type = 'button';
+    item.className = 'loc-item';
+    item.innerHTML = '<i class="fa-solid fa-location-dot"></i><span>' + p.name + '</span>';
+
+    item.addEventListener('click', () => {
+      document.getElementById('map-box').scrollIntoView({ behavior: 'smooth', block: 'center' });
+      map.flyTo([p.lat, p.lng], 15);
+      p.marker.openPopup();
+    });
+
+    p.item = item;
+    list.appendChild(item);
+  });
+
+  // ----- CHIPS FILTER -----
+  document.querySelectorAll('.map-chip').forEach(btn => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.map-chip').forEach(b => {
+        b.classList.remove('bg-gray-600', 'text-white');
+        b.classList.add('bg-gray-100', 'text-gray-700');
+      });
+      btn.classList.add('bg-gray-600', 'text-white');
+      btn.classList.remove('bg-gray-100', 'text-gray-700');
+
+      const cat = btn.dataset.cat;
+      places.forEach(p => {
+        const show = cat === 'all' || p.cat === cat;
+        if (show) p.marker.addTo(map); else map.removeLayer(p.marker);
+        p.item.style.display = show ? 'flex' : 'none';
+      });
+    });
+  });
+
+  // ----- Scroll zoom tabhi jab map pe click ho -----
+  map.on('click', () => map.scrollWheelZoom.enable());
+  map.on('mouseout', () => map.scrollWheelZoom.disable());
+</script>
+
+<section class="text-white body-font">
+  <div class="w-full max-w-none px-3 py-24 mx-auto">
+    <div class="grid grid-cols-2 gap-4 lg:grid-cols-4">
+      <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-sky-800">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_88_visa-and-entry-header (1).jpg" alt="blog">
+          <div class="p-6">
+           <h1 class="title-font text-lg font-medium text-white mb-3 hover:underline">Visa guide</h1>
+            <p class="leading-relaxed mb-3">Essential information before you plan your trip to Dubai</p>
+            <div class="flex items-center flex-wrap ">
+              <a class="text-white inline-flex items-center md:mb-2 lg:mb-0 hover:underline">Learn more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-sky-800">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_89_4-3-getting-to-and-around-dubai-t14-fallback (1).jpg" alt="blog">
+          <div class="p-6">
+           <h1 class="title-font text-lg font-medium text-white mb-3 hover:underline">Public Transport</h1>
+            <p class="leading-relaxed mb-3">Head out to Dubai's best kid-approved activities over the school holidays.
+            </p>
+            <div class="flex items-center flex-wrap">
+              <a class="text-white inline-flex items-center md:mb-2 lg:mb-0 hover:underline">Learn more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="min-w-0">
+        <div class="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden bg-sky-800">
+          <img class="lg:h-48 md:h-36 w-full object-cover object-center transition-transform duration-300 hover:scale-105" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_90_4-4-places-to-stay-t14-fallback (1).jpg" alt="blog">
+          <div class="p-6">
+            <h1 class="title-font text-lg font-medium text-white mb-3 hover:underline">Places to stay</h1>
+            <p class="leading-relaxed mb-3">Explore an incredible range of accommodation options.
+            </p>
+            <div class="flex items-center flex-wrap ">
+              <a class="text-white inline-flex items-center md:mb-2 lg:mb-0 hover:underline">Learn more
+                <svg class="w-4 h-4 ml-2" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M5 12h14"></path>
+                  <path d="M12 5l7 7-7 7"></path>
+                </svg>
+              </a>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+     <div class="min-w-0">
+  <div class="flex h-full flex-col overflow-hidden rounded-lg border-2 border-gray-200 border-opacity-60 bg-sky-800 p-6">
+
+    <h1 class="title-font mb-3 text-lg font-medium text-white hover:underline">About Dubai</h1>
+    <p class="mb-3 leading-relaxed">See how Dubai transformed into a sun-soaked modern metropolis.</p>
+
+    <!-- mt-auto: ye div hamesha card ke neeche rahega -->
+    <div class="mt-auto flex flex-wrap items-center pt-3" style="margin-top:auto;">
+      <a class="inline-flex items-center text-white hover:underline">Learn more
+        <svg class="ml-2 h-4 w-4" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M5 12h14"></path>
+          <path d="M12 5l7 7-7 7"></path>
+        </svg>
+      </a>
+    </div>
+
+  </div>
+</div>
+      
+  
+</section>
+
+<section class="text-white body-font">
+  <div class="container mt-2.5 flex md:flex-row flex-col items-start text-left w-full max-w-none px-3 py-24">
+    
+    
+    <div class="flex md:flex-row flex-col items-start w-full">
+      
+      <div class="md:w-3/5 mb-10 md:mb-0 overflow-hidden lg:w-3/5 w-full lg:mb-0 ">
+        <img class="feature-img-2 object-cover object-center rounded-2xl transition-transform duration-300 hover:scale-105" alt="hero" src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_91_best-rollercoasters-in-dubai-motiongate-park-6.jpg">
+      </div>
+      
+     <div class="feature-text md:w-1/2 lg:pl-24 md:pl-16 flex flex-col items-start text-left lg:w-2/5 w-full pt-40 px-3"
+           style="background-color:#9d1780; color:#fff;">
+
+        <h1 class="title-font sm:text-4xl text-3xl mb-4 font-medium text-white hover:underline">
+          Save upto 60% with Dubai Pass</h1>
+        <p class="mb-8 leading-relaxed text-left">Experience all that's possible with the Dubai Pass. Create your own tailor-made itinerary, choosing from 48 must-visit attractions and activities. </p>
+        
+        <button type="button"
+                 style="background-color:#b9369d; color:#fff; border:2px solid #fff; border-radius:1rem; padding:12px 24px; cursor:pointer; transition:background-color .2s ease, color .2s ease;"
+                 onmouseover="this.style.backgroundColor='#ffffff'; this.style.color='#9d174d';"
+                 onmouseout="this.style.backgroundColor='#9d174d'; this.style.color='#ffffff';">
+           Buy Now
+         </button>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<section class="wx-section">
+  <h2 class="wx-title">Weather in Dubai</h2>
+
+  <div class="wx-wrap">
+
+    <!-- LEFT -->
+    <div class="wx-left">
+      <div class="wx-now">
+        <span class="wx-temp" id="wx-temp">32.6°</span>
+
+        <svg class="wx-icon" viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round">
+          <circle cx="32" cy="32" r="11"/>
+          <line x1="32" y1="4"  x2="32" y2="12"/>
+          <line x1="32" y1="52" x2="32" y2="60"/>
+          <line x1="4"  y1="32" x2="12" y2="32"/>
+          <line x1="52" y1="32" x2="60" y2="32"/>
+          <line x1="12" y1="12" x2="18" y2="18"/>
+          <line x1="46" y1="46" x2="52" y2="52"/>
+          <line x1="52" y1="12" x2="46" y2="18"/>
+          <line x1="18" y1="46" x2="12" y2="52"/>
+        </svg>
+
+        <span class="wx-cond">Sunny</span>
+      </div>
+
+      <div class="wx-units">
+        <button type="button" class="wx-unit active" data-unit="c">Celcius</button>
+        <button type="button" class="wx-unit" data-unit="f">Farenheit</button>
+      </div>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="wx-right">
+      <div class="wx-stats">
+        <div>
+          <p class="wx-label">Sunrise</p>
+          <p class="wx-value">06:17</p>
+        </div>
+        <div>
+          <p class="wx-label">Sunset</p>
+          <p class="wx-value">17:51</p>
+        </div>
+        <div>
+          <p class="wx-label">Low</p>
+          <p class="wx-value" data-c="29.9">29.9°</p>
+        </div>
+        <div>
+          <p class="wx-label">High</p>
+          <p class="wx-value" data-c="32.7">32.7°</p>
+        </div>
+        <div>
+          <p class="wx-label">Humidity</p>
+          <p class="wx-value">59%</p>
+        </div>
+        <div>
+          <p class="wx-label">Wind</p>
+          <p class="wx-value">20.9 km/h</p>
+        </div>
+      </div>
+
+      <a href="#" class="wx-more">Learn more <i class="fa-solid fa-angle-right"></i></a>
+    </div>
+
+  </div>
+</section>
+
+<hr class="wx-hr">
+<script>
+  (function () {
+    const tempEl = document.getElementById('wx-temp');
+    const tempC = 32.6;
+    const lowHigh = document.querySelectorAll('.wx-value[data-c]');
+    const unitBtns = document.querySelectorAll('.wx-unit');
+
+    function toF(c) { return (c * 9 / 5 + 32).toFixed(1); }
+
+    unitBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const unit = btn.dataset.unit;
+
+        unitBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        tempEl.textContent = (unit === 'c' ? tempC.toFixed(1) : toF(tempC)) + '°';
+        lowHigh.forEach(el => {
+          const c = parseFloat(el.dataset.c);
+          el.textContent = (unit === 'c' ? c.toFixed(1) : toF(c)) + '°';
+        });
+      });
+    });
+  })();
+</script>
+
+
+
+<!-- BACK TO TOP -->
+<footer class="mt-12 bg-white px-6 pb-28 text-gray-700">
+
+  <!-- MAIN BLOCK -->
+  <div class="flex flex-col gap-10 lg:flex-row lg:justify-between">
+
+    <!-- LEFT: logo + paragraph + social icons -->
+    <div class="lg:w-5/12">
+      <img class="h-11 w-auto" alt="Dubai"
+           src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/imgi_5_dubai-flag-logo-5.svg">
+
+      <p class="mt-10 max-w-xl text-lg leading-8">
+        Visit Dubai is the official tourism guide to Dubai. From the city's iconic landmarks to vibrant neighbourhoods, world-class shopping and rich cultural experiences, find out all you need to know and plan your trip now.
+      </p>
+
+      <div class="mt-7 flex items-center gap-7 text-2xl text-gray-900">
+        <a href="#" aria-label="Facebook" class="transition hover:text-sky-800"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="#" aria-label="Instagram" class="transition hover:text-sky-800"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="Tripadvisor">
+          <img class="h-7 w-7" alt="Tripadvisor"
+               src="../../img/Visit Dubai – Official Tourism Guide to Dubai’s Attractions, Events & Culture/download (1).svg">
+        </a>
+        <a href="#" aria-label="X" class="transition hover:text-sky-800"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="#" aria-label="YouTube" class="transition hover:text-sky-800"><i class="fa-brands fa-youtube"></i></a>
+      </div>
+    </div>
+
+    <!-- RIGHT: 3 link columns (flex row) -->
+    <div class="fcols">
+
+      <div>
+        <h3>Popular links</h3>
+        <ul>
+          <li><a href="#">Explore Dubai</a></li>
+          <li><a href="#">Things to do</a></li>
+          <li><a href="#">What's on</a></li>
+          <li><a href="#">Articles</a></li>
+          <li><a href="#">Places to visit</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Helpful information</h3>
+        <ul>
+          <li><a href="#">Plan your trip</a></li>
+          <li><a href="#">Visa guide</a></li>
+          <li><a href="#">Contact us</a></li>
+          <li><a href="#">Frequently Asked Questions</a></li>
+          <li><a href="#">Travel advisory</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>Related sites</h3>
+        <ul>
+          <li><a href="#">Invest in Dubai</a></li>
+          <li><a href="#">Dubai DET</a></li>
+          <li><a href="#">Consumer Rights</a></li>
+          <li><a href="#">Dubai Founders HQ</a></li>
+          <li><a href="#">Travel trade</a></li>
+          <li><a href="#">Retire in Dubai</a></li>
+          <li><a href="#">Study Dubai</a></li>
+          <li><a href="#">MICE</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+  <!-- MAIN BLOCK band -->
+
+  <!-- DIVIDER (light gray line) -->
+  <hr class="mb-7 mt-10 border-t border-gray-200">
+
+  <!-- BOTTOM INFO -->
+  <div class="fbottom">
+
+  <div>
+    <div class="fbottom-links">
+      <a href="#">Terms of use</a>
+      <a href="#">Privacy Notice</a>
+      <a href="#">Cookie notice</a>
+      <a href="#">Cookie preference centre</a>
+      <a href="#">Sitemap</a>
+    </div>
+    <p class="fbottom-copy">Copyright © 2026. This site is maintained by Dubai Department of Economy and Tourism.</p>
+  </div>
+
+  <div class="fbottom-right">
+    <p><strong>Site last updated 17/10/2026</strong></p>
+    <p>This site is protected by reCAPTCHA and the Google <strong>Privacy Policy</strong> and <strong>Terms of Service</strong> apply.</p>
+  </div>
+
+</div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a href="#" aria-label="Back to top"
+   class="fixed bottom-24 right-6 z-40 flex h-12 w-12 items-center justify-center rounded bg-white text-xl text-sky-800 shadow-lg">
+  <i class="fa-solid fa-arrow-up"></i>
+</a>
+
+<div class="sb">
+
+  <div class="sb-group">
+    <a href="#" aria-label="Feedback"><i class="fa-regular fa-face-smile"></i></a>
+    <a href="#" aria-label="Chat"><i class="fa-regular fa-comments"></i></a>
+  </div>
+
+  <div class="sb-group">
+    <a href="mailto:info@example.com">
+      <i class="fa-solid fa-envelope" style="color:#4b5563;"></i>
+      <span class="sb-label">Contact us</span>
+    </a>
+    <a href="https://wa.me/971000000000">
+      <i class="fa-brands fa-whatsapp" style="color:#4b5563;"></i>
+      <span class="sb-label">WhatsApp chat</span>
+    </a>
+    <a href="#" aria-label="Accessibility">
+      <i class="fa-solid fa-universal-access" style="color:#4b5563;"></i>
+    </a>
+  </div>
+
+</div>
+
+  
+
+
+</body>
+</html>

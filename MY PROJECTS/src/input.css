@@ -1,0 +1,5 @@
+@import "tailwindcss";
+.nav-link:hover {
+  background-color: #035E88;
+  color: white;
+}
